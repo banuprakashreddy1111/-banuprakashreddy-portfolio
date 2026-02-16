@@ -37,7 +37,7 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <p class="greeting">Hello, I'm</p>
-                    <h1 class="name">Sonnapureddy Banuprakashreddy</h1>
+                    <h1 class="name">Sonnapreddy Banuprakash Reddy</h1>
                     <h2 class="title">Data Analyst | Python | SQL | Power BI</h2>
                     <p class="description">
                         Transforming raw data into actionable insights with 8+ months of internship experience. 
@@ -340,7 +340,7 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact Section - UPDATED with FormSubmit.co -->
     <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
@@ -376,11 +376,27 @@
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form id="contactForm">
-                        <input type="text" placeholder="Your Name" required>
-                        <input type="email" placeholder="Your Email" required>
-                        <input type="text" placeholder="Subject">
-                        <textarea rows="5" placeholder="Your Message" required></textarea>
+                    <!-- UPDATED: FormSubmit.co integration -->
+                    <form action="https://formsubmit.co/banuprakashreddy33@gmail.com" method="POST">
+                        <!-- Honeypot to prevent spam -->
+                        <input type="text" name="_honey" style="display:none">
+                        
+                        <!-- Disable captcha for simplicity -->
+                        <input type="hidden" name="_captcha" value="false">
+                        
+                        <!-- Custom subject line -->
+                        <input type="hidden" name="_subject" value="New Portfolio Contact from Website!">
+                        
+                        <!-- Thank you page redirect (optional) -->
+                        <input type="hidden" name="_next" value="https://banuprakashreddy1111.github.io/-banuprakashreddy-portfolio/thank-you.html">
+                        
+                        <!-- Form fields -->
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <input type="text" name="subject" placeholder="Subject">
+                        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                        
+                        <!-- Submit button -->
                         <button type="submit" class="btn btn-primary">Send Message</button>
                     </form>
                 </div>
