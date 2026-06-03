@@ -1,4 +1,3 @@
-```javascript
 // Mobile Menu
 
 const hamburger = document.querySelector(".hamburger");
@@ -177,4 +176,3 @@ if (backToTop) {
     });
 
 }
-```
