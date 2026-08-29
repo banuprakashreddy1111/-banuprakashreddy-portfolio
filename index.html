@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
 
     <meta
@@ -12,7 +10,7 @@
 
     <meta
         name="description"
-        content="Banu Prakash Reddy — Data Analyst and Data Scientist portfolio. Explore projects in SQL, Python, Power BI, Machine Learning and application development."
+        content="Banu Prakash Reddy — Data Analyst and Data Scientist portfolio."
     >
 
     <meta
@@ -20,19 +18,12 @@
         content="Banu Prakash Reddy"
     >
 
-    <meta
-        name="theme-color"
-        content="#070a0f"
+    <title>Banu Prakash Reddy | Data Analyst & Data Scientist</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
     >
-
-    <title>
-        Banu Prakash Reddy | Data Analyst & Data Scientist
-    </title>
-
-
-    <!-- =====================================================
-         GOOGLE FONTS
-         ===================================================== -->
 
     <link
         rel="preconnect"
@@ -49,108 +40,47 @@
         href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap"
         rel="stylesheet"
     >
-
-
-    <!-- =====================================================
-         FONT AWESOME
-         ===================================================== -->
-
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    >
-
-
-    <!-- =====================================================
-         CSS
-         ===================================================== -->
-
-    <link
-        rel="stylesheet"
-        href="style.css"
-    >
-
 </head>
-
 
 <body>
 
-
-    <!-- =====================================================
-         BACKGROUND
-         ===================================================== -->
-
-    <div
-        class="background"
-        aria-hidden="true"
-    >
-
-        <div class="background-grid"></div>
-
-        <div class="background-glow glow-one"></div>
-
-        <div class="background-glow glow-two"></div>
-
-    </div>
-
-
-    <!-- =====================================================
+    <!-- =========================================================
          PAGE LOADER
-         ===================================================== -->
+    ========================================================== -->
 
     <div
         class="page-loader"
-        aria-label="Loading portfolio"
+        id="pageLoader"
+        aria-hidden="true"
     >
-
         <div class="loader-inner">
-
-            <span class="loader-dot"></span>
-
-            <span class="loader-dot"></span>
-
-            <span class="loader-dot"></span>
-
+            <span>B.</span>
         </div>
-
     </div>
 
 
-    <!-- =====================================================
-         HEADER
-         ===================================================== -->
+    <!-- =========================================================
+         NAVIGATION
+    ========================================================== -->
 
-    <header class="site-header">
+    <header class="site-header" id="siteHeader">
 
-        <div class="container navbar">
-
-
-            <!-- BRAND -->
+        <div class="nav-container">
 
             <a
                 href="#home"
                 class="brand"
                 aria-label="Banu Prakash Reddy home"
             >
-
-                <span class="brand-mark">
-                    B
-                </span>
-
-                <span class="brand-name">
-                    BANU<span>.</span>
-                </span>
-
+                <span class="brand-mark">B</span>
+                <span class="brand-name">BANU<span>.</span></span>
             </a>
 
 
-            <!-- NAVIGATION -->
-
             <nav
-                class="nav-menu"
-                aria-label="Primary navigation"
+                class="desktop-nav"
+                aria-label="Main navigation"
             >
-
                 <a
                     href="#home"
                     class="nav-link active"
@@ -199,26 +129,57 @@
                 >
                     Contact
                 </a>
-
             </nav>
 
 
-            <!-- MOBILE MENU -->
-
             <button
-                class="menu-toggle"
+                class="mobile-menu-btn"
+                id="mobileMenuBtn"
                 type="button"
-                aria-label="Toggle navigation menu"
+                aria-label="Open navigation menu"
                 aria-expanded="false"
-                aria-controls="primary-navigation"
             >
-
                 <span></span>
                 <span></span>
                 <span></span>
-
             </button>
 
+        </div>
+
+
+        <!-- Mobile navigation -->
+
+        <div
+            class="mobile-nav"
+            id="mobileNav"
+        >
+            <a href="#home" class="mobile-nav-link">
+                Home
+            </a>
+
+            <a href="#about" class="mobile-nav-link">
+                About
+            </a>
+
+            <a href="#skills" class="mobile-nav-link">
+                Skills
+            </a>
+
+            <a href="#projects" class="mobile-nav-link">
+                Projects
+            </a>
+
+            <a href="#experience" class="mobile-nav-link">
+                Experience
+            </a>
+
+            <a href="#education" class="mobile-nav-link">
+                Education
+            </a>
+
+            <a href="#contact" class="mobile-nav-link">
+                Contact
+            </a>
         </div>
 
     </header>
@@ -227,43 +188,53 @@
     <main>
 
 
-        <!-- =================================================
+        <!-- =====================================================
              HERO
-             ================================================= -->
+        ====================================================== -->
 
         <section
+            class="hero section"
             id="home"
-            class="hero"
         >
 
-            <div class="container hero-container">
+            <div class="hero-grid">
 
 
-                <!-- HERO CONTENT -->
+                <!-- Hero left -->
 
-                <div class="hero-content reveal">
+                <div class="hero-content">
 
-                    <div class="eyebrow">
-
-                        <span class="status-dot"></span>
-
+                    <div
+                        class="availability-pill reveal"
+                    >
+                        <span class="availability-dot"></span>
                         Open to opportunities
-
                     </div>
 
 
-                    <h1 class="hero-title">
+                    <div class="hero-kicker reveal">
+                        DATA / AI
+                    </div>
+
+
+                    <h1 class="hero-title reveal">
 
                         Turning
+
                         <span class="accent-text">
                             data
                         </span>
-                        into decisions.
+
+                        into
+
+                        <span class="hero-line">
+                            decisions.
+                        </span>
 
                     </h1>
 
 
-                    <p class="hero-description">
+                    <p class="hero-description reveal">
 
                         I'm
                         <strong>Banu Prakash Reddy</strong>,
@@ -274,44 +245,33 @@
                     </p>
 
 
-                    <div class="hero-role">
+                    <div
+                        class="hero-stack reveal"
+                        aria-label="Core skills"
+                    >
 
-                        <span class="role-line"></span>
+                        <span>SQL</span>
+                        <i>/</i>
 
-                        SQL
+                        <span>PYTHON</span>
+                        <i>/</i>
 
-                        <span class="role-separator">
-                            /
-                        </span>
+                        <span>POWER BI</span>
+                        <i>/</i>
 
-                        Python
-
-                        <span class="role-separator">
-                            /
-                        </span>
-
-                        Power BI
-
-                        <span class="role-separator">
-                            /
-                        </span>
-
-                        Machine Learning
+                        <span>MACHINE LEARNING</span>
 
                     </div>
 
 
-                    <div class="hero-actions">
+                    <div class="hero-actions reveal">
 
                         <a
                             href="#projects"
                             class="btn btn-primary"
                         >
-
-                            Explore my work
-
-                            <i class="fa-solid fa-arrow-down"></i>
-
+                            <span>Explore my work</span>
+                            <span class="btn-arrow">↓</span>
                         </a>
 
 
@@ -321,11 +281,8 @@
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-
-                            <i class="fa-solid fa-file-arrow-down"></i>
-
-                            Resume
-
+                            <span class="resume-icon">▣</span>
+                            <span>Resume</span>
                         </a>
 
 
@@ -333,49 +290,8 @@
                             href="#contact"
                             class="btn btn-secondary"
                         >
-
-                            Let's connect
-
-                            <i class="fa-solid fa-arrow-right"></i>
-
-                        </a>
-
-                    </div>
-
-
-                    <div class="hero-socials">
-
-                        <a
-                            href="https://github.com/banuprakashreddy1111"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="GitHub"
-                        >
-
-                            <i class="fa-brands fa-github"></i>
-
-                        </a>
-
-
-                        <a
-                            href="https://www.linkedin.com/in/sonnapureddybanuprakashreddy/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="LinkedIn"
-                        >
-
-                            <i class="fa-brands fa-linkedin-in"></i>
-
-                        </a>
-
-
-                        <a
-                            href="mailto:banuprakashreddysonnapureddy@gmail.com"
-                            aria-label="Email"
-                        >
-
-                            <i class="fa-solid fa-envelope"></i>
-
+                            <span>Let's connect</span>
+                            <span class="btn-arrow">→</span>
                         </a>
 
                     </div>
@@ -383,216 +299,160 @@
                 </div>
 
 
-                <!-- HERO VISUAL -->
+                <!-- =================================================
+                     HERO PHOTO
+                     Small circular profile photo
+                ================================================== -->
 
-                <div
-                    class="hero-visual reveal reveal-delay"
-                >
+                <div class="hero-visual reveal">
 
-                    <div class="data-orbit">
+                    <div class="profile-orbit orbit-one"></div>
+                    <div class="profile-orbit orbit-two"></div>
 
 
-                        <div class="orbit orbit-one"></div>
+                    <div class="profile-photo-wrapper">
 
-                        <div class="orbit orbit-two"></div>
+                        <div class="profile-photo-ring">
 
-                        <div class="orbit orbit-three"></div>
-
-
-                        <!-- PROFILE PHOTO -->
-
-                        <div class="profile-photo-card">
-
-                            <div class="profile-photo-glow"></div>
-
-                            <div class="profile-photo-frame">
-
-                                <img
-                                    src="ppsizepic.jpeg"
-                                    alt="Banu Prakash Reddy"
-                                    class="profile-photo"
-                                >
-
-                            </div>
-
-                            <div class="profile-photo-label">
-
-                                <span>
-                                    DATA / AI
-                                </span>
-
-                                <strong>
-                                    BANU PRAKASH REDDY
-                                </strong>
-
-                            </div>
-
-                        </div>
-
-
-                        <!-- TERMINAL -->
-
-                        <div class="core-card">
-
-                            <div class="core-top">
-
-                                <span class="terminal-dot"></span>
-                                <span class="terminal-dot"></span>
-                                <span class="terminal-dot"></span>
-
-                            </div>
-
-                            <div class="core-body">
-
-                                <div class="code-line">
-
-                                    <span class="code-keyword">
-                                        SELECT
-                                    </span>
-
-                                    <span>
-                                        insight
-                                    </span>
-
-                                </div>
-
-
-                                <div class="code-line">
-
-                                    <span class="code-keyword">
-                                        FROM
-                                    </span>
-
-                                    <span>
-                                        data
-                                    </span>
-
-                                </div>
-
-
-                                <div class="code-line">
-
-                                    <span class="code-keyword">
-                                        WHERE
-                                    </span>
-
-                                    <span>
-                                        impact = true
-                                    </span>
-
-                                </div>
-
-
-                                <div class="code-line">
-
-                                    <span class="code-keyword">
-                                        ORDER BY
-                                    </span>
-
-                                    <span>
-                                        value DESC
-                                    </span>
-
-                                </div>
-
-
-                                <div class="code-line">
-
-                                    <span class="code-cursor">
-                                        _
-                                    </span>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-                        <!-- FLOATING SQL -->
-
-                        <div class="floating-card card-sql">
-
-                            <div class="floating-icon">
-
-                                <i class="fa-solid fa-database"></i>
-
-                            </div>
-
-                            <div>
-
-                                <small>
-                                    Analytics
-                                </small>
-
-                                <strong>
-                                    SQL
-                                </strong>
-
-                            </div>
-
-                        </div>
-
-
-                        <!-- FLOATING PYTHON -->
-
-                        <div class="floating-card card-python">
-
-                            <div class="floating-icon">
-
-                                <i class="fa-brands fa-python"></i>
-
-                            </div>
-
-                            <div>
-
-                                <small>
-                                    Programming
-                                </small>
-
-                                <strong>
-                                    Python
-                                </strong>
-
-                            </div>
-
-                        </div>
-
-
-                        <!-- FLOATING POWER BI -->
-
-                        <div class="floating-card card-powerbi">
-
-                            <div class="floating-icon">
-
-                                <i class="fa-solid fa-chart-simple"></i>
-
-                            </div>
-
-                            <div>
-
-                                <small>
-                                    BI
-                                </small>
-
-                                <strong>
-                                    Power BI
-                                </strong>
-
-                            </div>
+                            <img
+                                src="ppsizepic.jpeg"
+                                alt="Banu Prakash Reddy"
+                                class="profile-photo"
+                            >
 
                         </div>
 
                     </div>
 
 
-                    <div class="scroll-indicator">
+                    <!-- Floating skill cards -->
 
-                        <span>
-                            Scroll to explore
+                    <div class="floating-card floating-sql">
+
+                        <span class="floating-icon">
+                            ▤
                         </span>
 
-                        <i class="fa-solid fa-arrow-down"></i>
+                        <div>
+                            <small>Analytics</small>
+                            <strong>SQL</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="floating-card floating-python">
+
+                        <span class="floating-icon">
+                            ◉
+                        </span>
+
+                        <div>
+                            <small>Programming</small>
+                            <strong>Python</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="floating-card floating-powerbi">
+
+                        <span class="floating-icon">
+                            ▥
+                        </span>
+
+                        <div>
+                            <small>BI</small>
+                            <strong>Power BI</strong>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Code panel -->
+
+                    <div class="code-panel">
+
+                        <div class="code-window-header">
+
+                            <span></span>
+                            <span></span>
+                            <span></span>
+
+                        </div>
+
+
+                        <div class="code-content">
+
+                            <p>
+                                <span class="code-keyword">
+                                    SELECT
+                                </span>
+
+                                <span class="code-variable">
+                                    insight
+                                </span>
+                            </p>
+
+
+                            <p>
+                                <span class="code-keyword">
+                                    FROM
+                                </span>
+
+                                <span class="code-variable">
+                                    data
+                                </span>
+                            </p>
+
+
+                            <p>
+                                <span class="code-keyword">
+                                    WHERE
+                                </span>
+
+                                <span class="code-variable">
+                                    impact
+                                </span>
+
+                                <span class="code-symbol">
+                                    =
+                                </span>
+
+                                <span class="code-value">
+                                    true
+                                </span>
+                            </p>
+
+
+                            <p>
+                                <span class="code-keyword">
+                                    ORDER BY
+                                </span>
+
+                                <span class="code-variable">
+                                    value
+                                </span>
+
+                                <span class="code-keyword">
+                                    DESC
+                                </span>
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="profile-caption">
+
+                        <span>
+                            DATA / AI
+                        </span>
+
+                        <strong>
+                            BANU PRAKASH REDDY
+                        </strong>
 
                     </div>
 
@@ -600,72 +460,57 @@
 
             </div>
 
-        </section>
 
+            <!-- Hero metrics -->
 
-        <!-- =================================================
-             STATS
-             ================================================= -->
+            <div class="hero-metrics reveal">
 
-        <section class="stats-section">
+                <div class="metric">
 
-            <div class="container stats-grid">
-
-
-                <div class="stat-item reveal">
-
-                    <span
-                        class="stat-number"
-                    >
+                    <strong>
                         70K+
-                    </span>
+                    </strong>
 
-                    <span class="stat-label">
+                    <span>
                         Records analyzed
                     </span>
 
                 </div>
 
 
-                <div class="stat-item reveal">
+                <div class="metric">
 
-                    <span
-                        class="stat-number"
-                    >
+                    <strong>
                         40%
-                    </span>
+                    </strong>
 
-                    <span class="stat-label">
+                    <span>
                         Manual effort reduced
                     </span>
 
                 </div>
 
 
-                <div class="stat-item reveal">
+                <div class="metric">
 
-                    <span
-                        class="stat-number"
-                    >
+                    <strong>
                         114
-                    </span>
+                    </strong>
 
-                    <span class="stat-label">
+                    <span>
                         SQL analysis queries
                     </span>
 
                 </div>
 
 
-                <div class="stat-item reveal">
+                <div class="metric">
 
-                    <span
-                        class="stat-number"
-                    >
-                        5
-                    </span>
+                    <strong>
+                        4+
+                    </strong>
 
-                    <span class="stat-label">
+                    <span>
                         Featured projects
                     </span>
 
@@ -673,211 +518,149 @@
 
             </div>
 
+
+            <a
+                href="#about"
+                class="scroll-indicator"
+                aria-label="Scroll to about section"
+            >
+                <span>
+                    Scroll to explore
+                </span>
+
+                <span class="scroll-arrow">
+                    ↓
+                </span>
+            </a>
+
         </section>
 
 
-        <!-- =================================================
+        <!-- =====================================================
              ABOUT
-             ================================================= -->
+        ====================================================== -->
 
         <section
+            class="section content-section"
             id="about"
-            class="section"
         >
 
-            <div class="container">
+            <div class="section-heading">
+
+                <span class="section-number">
+                    01 / About
+                </span>
+
+                <h2>
+                    Data-driven thinking,
+                    <span>practical execution.</span>
+                </h2>
+
+            </div>
 
 
-                <div class="section-heading reveal">
+            <div class="about-grid">
 
-                    <span class="section-kicker">
-                        01 / About
-                    </span>
+                <div class="about-intro">
 
-                    <h2>
-                        Data-driven thinking,
-                        <span class="muted">
-                            practical execution.
-                        </span>
-                    </h2>
+                    <p class="large-text">
+
+                        I enjoy working at the intersection of
+                        <strong>data, technology, and business problems.</strong>
+
+                    </p>
 
                 </div>
 
 
-                <div class="about-grid">
+                <div class="about-content">
+
+                    <p>
+                        My work spans SQL analytics, Python-based
+                        data processing, dashboard development,
+                        machine learning, and application development.
+                        I focus on understanding the problem first,
+                        working with reliable data, and turning the
+                        result into something useful and actionable.
+                    </p>
+
+                    <p>
+                        During my internship experience, I worked with
+                        large datasets, automated repetitive workflows,
+                        created analytical reports, and collaborated
+                        around business and technical requirements.
+                    </p>
 
 
-                    <div class="about-main reveal">
+                    <div class="about-actions">
 
-                        <p class="about-lead">
+                        <a
+                            href="mailto:banuprakashreddysonnapureddy@gmail.com"
+                            class="text-link"
+                        >
+                            Email me
+                            <span>→</span>
+                        </a>
 
-                            I enjoy working at the intersection of
-                            <strong>
-                                data, technology, and business problems.
-                            </strong>
-
-                        </p>
-
-
-                        <p>
-
-                            My work spans SQL analytics,
-                            Python-based data processing,
-                            dashboard development,
-                            machine learning, and application
-                            development.
-
-                        </p>
-
-
-                        <p>
-
-                            I focus on understanding the problem first,
-                            working with reliable data, and turning
-                            the result into something useful and
-                            actionable.
-
-                        </p>
-
-
-                        <p>
-
-                            During my internship experience, I worked
-                            with large datasets, automated repetitive
-                            workflows, created analytical reports,
-                            and collaborated around business and
-                            technical requirements.
-
-                        </p>
-
-
-                        <div class="about-links">
-
-                            <a
-                                href="mailto:banuprakashreddysonnapureddy@gmail.com"
-                                class="text-link"
-                            >
-
-                                Email me
-
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-                            </a>
-
-
-                            <a
-                                href="https://github.com/banuprakashreddy1111"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="text-link"
-                            >
-
-                                View GitHub
-
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-                            </a>
-
-
-                            <a
-                                href="BanuPrakashReddy_resume.pdf"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="text-link"
-                            >
-
-                                View Resume
-
-                                <i class="fa-solid fa-file-lines"></i>
-
-                            </a>
-
-                        </div>
+                        <a
+                            href="https://github.com/banuprakashreddy1111"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-link"
+                        >
+                            View GitHub
+                            <span>→</span>
+                        </a>
 
                     </div>
 
+                </div>
 
-                    <div class="about-side reveal reveal-delay">
-
-
-                        <div class="info-card">
-
-                            <span class="info-label">
-                                Based in
-                            </span>
-
-                            <strong>
-                                Bengaluru, India
-                            </strong>
-
-                        </div>
+            </div>
 
 
-                        <div class="info-card">
+            <div class="about-facts">
 
-                            <span class="info-label">
-                                Focus
-                            </span>
+                <div class="fact">
 
-                            <strong>
-                                Data & AI
-                            </strong>
+                    <span>Based in</span>
 
-                        </div>
+                    <strong>
+                        Bengaluru, India
+                    </strong>
 
-
-                        <div class="info-card">
-
-                            <span class="info-label">
-                                Education
-                            </span>
-
-                            <strong>
-                                B.Tech — EEE
-                            </strong>
-
-                        </div>
+                </div>
 
 
-                        <div class="info-card">
+                <div class="fact">
 
-                            <span class="info-label">
-                                Current direction
-                            </span>
+                    <span>Focus</span>
 
-                            <strong>
-                                Data Analytics / Data Science
-                            </strong>
+                    <strong>
+                        Data & AI
+                    </strong>
 
-                        </div>
+                </div>
 
 
-                        <div class="info-card">
+                <div class="fact">
 
-                            <span class="info-label">
-                                Core strength
-                            </span>
+                    <span>Education</span>
 
-                            <strong>
-                                Analytical Problem Solving
-                            </strong>
+                    <strong>
+                        B.Tech — EEE
+                    </strong>
 
-                        </div>
+                </div>
 
 
-                        <div class="info-card">
+                <div class="fact">
 
-                            <span class="info-label">
-                                Approach
-                            </span>
+                    <span>Current direction</span>
 
-                            <strong>
-                                Insight → Action
-                            </strong>
-
-                        </div>
-
-                    </div>
+                    <strong>
+                        Data Analytics / Data Science
+                    </strong>
 
                 </div>
 
@@ -886,1351 +669,998 @@
         </section>
 
 
-        <!-- =================================================
+        <!-- =====================================================
              SKILLS
-             ================================================= -->
+        ====================================================== -->
 
         <section
+            class="section content-section dark-section"
             id="skills"
-            class="section skills-section"
         >
 
-            <div class="container">
+            <div class="section-heading">
+
+                <span class="section-number">
+                    02 / Skills
+                </span>
+
+                <h2>
+                    Tools I use to
+                    <span>solve problems.</span>
+                </h2>
+
+            </div>
 
 
-                <div class="section-heading reveal">
+            <div class="skills-grid">
 
-                    <span class="section-kicker">
-                        02 / Skills
+
+                <article class="skill-card">
+
+                    <span class="skill-number">
+                        01
+                    </span>
+
+                    <h3>
+                        SQL & Databases
+                    </h3>
+
+                    <p>
+                        Designing queries and extracting meaningful
+                        insights from relational data.
+                    </p>
+
+                    <div class="skill-tags">
+
+                        <span>MySQL</span>
+                        <span>SQL Server</span>
+                        <span>CTEs</span>
+                        <span>Window Functions</span>
+                        <span>Joins</span>
+                        <span>Subqueries</span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="skill-card">
+
+                    <span class="skill-number">
+                        02
+                    </span>
+
+                    <h3>
+                        Python & Analytics
+                    </h3>
+
+                    <p>
+                        Cleaning, transforming, analyzing, and
+                        visualizing data with Python.
+                    </p>
+
+                    <div class="skill-tags">
+
+                        <span>Python</span>
+                        <span>Pandas</span>
+                        <span>NumPy</span>
+                        <span>Matplotlib</span>
+                        <span>Seaborn</span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="skill-card">
+
+                    <span class="skill-number">
+                        03
+                    </span>
+
+                    <h3>
+                        BI & Visualization
+                    </h3>
+
+                    <p>
+                        Building dashboards and visual stories that
+                        communicate business performance.
+                    </p>
+
+                    <div class="skill-tags">
+
+                        <span>Power BI</span>
+                        <span>KPI Dashboards</span>
+                        <span>EDA</span>
+                        <span>Reporting</span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="skill-card">
+
+                    <span class="skill-number">
+                        04
+                    </span>
+
+                    <h3>
+                        Machine Learning
+                    </h3>
+
+                    <p>
+                        Building practical predictive models and
+                        deploying data-driven applications.
+                    </p>
+
+                    <div class="skill-tags">
+
+                        <span>Scikit-learn</span>
+                        <span>TensorFlow</span>
+                        <span>Keras</span>
+                        <span>Feature Engineering</span>
+                        <span>SMOTE</span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="skill-card">
+
+                    <span class="skill-number">
+                        05
+                    </span>
+
+                    <h3>
+                        Development
+                    </h3>
+
+                    <p>
+                        Building lightweight applications and
+                        integrating APIs with data workflows.
+                    </p>
+
+                    <div class="skill-tags">
+
+                        <span>FastAPI</span>
+                        <span>JavaScript</span>
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>REST APIs</span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="skill-card">
+
+                    <span class="skill-number">
+                        06
+                    </span>
+
+                    <h3>
+                        Engineering Workflow
+                    </h3>
+
+                    <p>
+                        Managing projects, documentation, deployment,
+                        automation, and reproducible workflows.
+                    </p>
+
+                    <div class="skill-tags">
+
+                        <span>Git</span>
+                        <span>GitHub</span>
+                        <span>Render</span>
+                        <span>Jupyter</span>
+                        <span>Automation</span>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             PROJECTS
+        ====================================================== -->
+
+        <section
+            class="section content-section"
+            id="projects"
+        >
+
+            <div class="section-heading projects-heading">
+
+                <div>
+
+                    <span class="section-number">
+                        03 / Selected work
                     </span>
 
                     <h2>
-                        Tools I use to
-                        <span class="muted">
-                            solve problems.
-                        </span>
+                        Projects built to
+                        <span>prove the work.</span>
                     </h2>
 
                 </div>
 
 
-                <div class="skills-grid">
+                <a
+                    href="https://github.com/banuprakashreddy1111"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="outline-link"
+                >
+                    All repositories
+                    <span>↗</span>
+                </a>
+
+            </div>
 
 
-                    <!-- SQL -->
+            <div class="projects-list">
 
-                    <article class="skill-card reveal">
 
-                        <span class="skill-number">
-                            01
-                        </span>
+                <!-- Project 01 -->
 
-                        <div class="skill-icon">
+                <article class="project-card">
 
-                            <i class="fa-solid fa-database"></i>
+                    <div class="project-index">
+                        01
+                    </div>
 
+
+                    <div class="project-main">
+
+                        <div class="project-meta">
+                            DATA ANALYTICS
+                            <span>Python</span>
                         </div>
 
                         <h3>
-                            SQL & Databases
+                            Amazon Price Analysis
                         </h3>
 
                         <p>
-                            Designing queries and extracting
-                            meaningful insights from relational data.
+                            Explored Amazon product pricing data using
+                            Python to identify pricing patterns,
+                            product trends, relationships between
+                            attributes, and actionable analytical
+                            insights.
                         </p>
 
-                        <div class="skill-tags">
 
-                            <span>MySQL</span>
-                            <span>SQL Server</span>
-                            <span>CTEs</span>
-                            <span>Window Functions</span>
-                            <span>Joins</span>
-                            <span>Subqueries</span>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- PYTHON -->
-
-                    <article class="skill-card reveal">
-
-                        <span class="skill-number">
-                            02
-                        </span>
-
-                        <div class="skill-icon">
-
-                            <i class="fa-brands fa-python"></i>
-
-                        </div>
-
-                        <h3>
-                            Python & Analytics
-                        </h3>
-
-                        <p>
-                            Cleaning, transforming, analyzing,
-                            and visualizing data with Python.
-                        </p>
-
-                        <div class="skill-tags">
+                        <div class="project-tags">
 
                             <span>Python</span>
                             <span>Pandas</span>
                             <span>NumPy</span>
                             <span>Matplotlib</span>
                             <span>Seaborn</span>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- BI -->
-
-                    <article class="skill-card reveal">
-
-                        <span class="skill-number">
-                            03
-                        </span>
-
-                        <div class="skill-icon">
-
-                            <i class="fa-solid fa-chart-column"></i>
-
-                        </div>
-
-                        <h3>
-                            BI & Visualization
-                        </h3>
-
-                        <p>
-                            Building dashboards and visual stories
-                            that communicate business performance.
-                        </p>
-
-                        <div class="skill-tags">
-
-                            <span>Power BI</span>
-                            <span>KPI Dashboards</span>
-                            <span>EDA</span>
-                            <span>Reporting</span>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- ML -->
-
-                    <article class="skill-card reveal">
-
-                        <span class="skill-number">
-                            04
-                        </span>
-
-                        <div class="skill-icon">
-
-                            <i class="fa-solid fa-brain"></i>
-
-                        </div>
-
-                        <h3>
-                            Machine Learning
-                        </h3>
-
-                        <p>
-                            Building practical predictive models
-                            and deploying data-driven applications.
-                        </p>
-
-                        <div class="skill-tags">
-
-                            <span>Scikit-learn</span>
-                            <span>TensorFlow</span>
-                            <span>Keras</span>
-                            <span>Feature Engineering</span>
-                            <span>SMOTE</span>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- DEVELOPMENT -->
-
-                    <article class="skill-card reveal">
-
-                        <span class="skill-number">
-                            05
-                        </span>
-
-                        <div class="skill-icon">
-
-                            <i class="fa-solid fa-code"></i>
-
-                        </div>
-
-                        <h3>
-                            Development
-                        </h3>
-
-                        <p>
-                            Building lightweight applications and
-                            integrating APIs with data workflows.
-                        </p>
-
-                        <div class="skill-tags">
-
-                            <span>FastAPI</span>
-                            <span>JavaScript</span>
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>REST APIs</span>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- ENGINEERING -->
-
-                    <article class="skill-card reveal">
-
-                        <span class="skill-number">
-                            06
-                        </span>
-
-                        <div class="skill-icon">
-
-                            <i class="fa-solid fa-gears"></i>
-
-                        </div>
-
-                        <h3>
-                            Engineering Workflow
-                        </h3>
-
-                        <p>
-                            Managing projects, documentation,
-                            deployment, automation, and reproducible
-                            workflows.
-                        </p>
-
-                        <div class="skill-tags">
-
-                            <span>Git</span>
-                            <span>GitHub</span>
-                            <span>Render</span>
                             <span>Jupyter</span>
-                            <span>Automation</span>
 
                         </div>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =================================================
-             PROJECTS
-             ================================================= -->
-
-        <section
-            id="projects"
-            class="section"
-        >
-
-            <div class="container">
-
-
-                <div class="section-heading projects-heading reveal">
-
-                    <div>
-
-                        <span class="section-kicker">
-                            03 / Selected Work
-                        </span>
-
-                        <h2>
-                            Projects built to
-                            <span class="muted">
-                                prove the work.
-                            </span>
-                        </h2>
-
-                    </div>
-
-
-                    <a
-                        href="https://github.com/banuprakashreddy1111"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="outline-link"
-                    >
-
-                        All repositories
-
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-                    </a>
-
-                </div>
-
-
-                <div class="projects-list">
-
-
-                    <!-- =================================================
-                         PROJECT 01
-                         ================================================= -->
-
-                    <article class="project-card reveal">
-
-                        <div class="project-index">
-                            01
-                        </div>
-
-
-                        <div class="project-main">
-
-                            <div class="project-top">
-
-                                <span class="project-category">
-                                    DATA ANALYTICS
-                                </span>
-
-                                <span class="project-year">
-                                    PYTHON
-                                </span>
-
-                            </div>
-
-
-                            <h3>
-                                Amazon Price Analysis
-                            </h3>
-
-
-                            <p>
-
-                                Explored Amazon product pricing data
-                                using Python to identify pricing
-                                patterns, product trends, relationships
-                                between attributes, and actionable
-                                analytical insights.
-
-                            </p>
-
-
-                            <div class="project-tech">
-
-                                <span>Python</span>
-                                <span>Pandas</span>
-                                <span>NumPy</span>
-                                <span>Matplotlib</span>
-                                <span>Seaborn</span>
-                                <span>Jupyter</span>
-
-                            </div>
-
-
-                            <div class="project-actions">
-
-                                <a
-                                    href="https://github.com/banuprakashreddy1111/amazon-price-analysis"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="project-link primary-link"
-                                >
-
-                                    View repository
-
-                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-                                </a>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="project-visual visual-amazon">
-
-                            <div class="chart-window">
-
-                                <div class="chart-header">
-
-                                    <div class="window-controls">
-
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-
-                                    </div>
-
-                                    price_analysis.py
-
-                                </div>
-
-
-                                <div class="chart-content">
-
-                                    <div class="chart-bars">
-
-                                        <span style="height:38%"></span>
-                                        <span style="height:56%"></span>
-                                        <span style="height:44%"></span>
-                                        <span style="height:73%"></span>
-                                        <span style="height:62%"></span>
-                                        <span style="height:86%"></span>
-                                        <span style="height:68%"></span>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- =================================================
-                         PROJECT 02
-                         ================================================= -->
-
-                    <article class="project-card reveal">
-
-                        <div class="project-index">
-                            02
-                        </div>
-
-
-                        <div class="project-main">
-
-                            <div class="project-top">
-
-                                <span class="project-category">
-                                    SQL ANALYTICS
-                                </span>
-
-                                <span class="project-year">
-                                    MYSQL
-                                </span>
-
-                            </div>
-
-
-                            <h3>
-                                Vehicle Tracking SQL Analysis
-                            </h3>
-
-
-                            <p>
-
-                                Designed a relational vehicle-tracking
-                                database and developed analytical SQL
-                                queries to evaluate vehicle performance,
-                                route delays, arrivals, and operational
-                                patterns.
-
-                            </p>
-
-
-                            <div class="project-tech">
-
-                                <span>MySQL</span>
-                                <span>SQL</span>
-                                <span>CTEs</span>
-                                <span>Window Functions</span>
-                                <span>Database Design</span>
-
-                            </div>
-
-
-                            <div class="project-actions">
-
-                                <a
-                                    href="https://github.com/banuprakashreddy1111/vehicle-tracking-sql-analysis"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="project-link primary-link"
-                                >
-
-                                    View repository
-
-                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-                                </a>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="project-side-visual sql-visual">
-
-                            <div class="sql-lines">
-
-                                <div>
-
-                                    <span class="sql-keyword">
-                                        SELECT
-                                    </span>
-
-                                    avg_delay
-
-                                </div>
-
-                                <div>
-
-                                    <span class="sql-keyword">
-                                        FROM
-                                    </span>
-
-                                    arrivals
-
-                                </div>
-
-                                <div>
-
-                                    <span class="sql-keyword">
-                                        GROUP BY
-                                    </span>
-
-                                    vehicle
-
-                                </div>
-
-                                <div>
-
-                                    <span class="sql-keyword">
-                                        ORDER BY
-                                    </span>
-
-                                    delay DESC
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- =================================================
-                         PROJECT 03
-                         ================================================= -->
-
-                    <article class="project-card reveal">
-
-                        <div class="project-index">
-                            03
-                        </div>
-
-
-                        <div class="project-main">
-
-                            <div class="project-top">
-
-                                <span class="project-category">
-                                    WEB APPLICATION
-                                </span>
-
-                                <span class="project-year">
-                                    FASTAPI
-                                </span>
-
-                            </div>
-
-
-                            <h3>
-                                Mobile Compare
-                            </h3>
-
-
-                            <p>
-
-                                Built a mobile comparison application
-                                that helps users compare phone
-                                specifications and indicative pricing
-                                while bringing multiple product
-                                attributes into one decision-making
-                                interface.
-
-                            </p>
-
-
-                            <div class="project-tech">
-
-                                <span>Python</span>
-                                <span>FastAPI</span>
-                                <span>JavaScript</span>
-                                <span>REST API</span>
-                                <span>HTML/CSS</span>
-                                <span>Render</span>
-
-                            </div>
-
-
-                            <div class="project-actions">
-
-                                <a
-                                    href="https://mobile-compare-ejiy.onrender.com/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="project-link primary-link"
-                                >
-
-                                    Live demo
-
-                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-                                </a>
-
-
-                                <a
-                                    href="https://github.com/banuprakashreddy1111/mobile-compare"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="project-link"
-                                >
-
-                                    GitHub
-
-                                    <i class="fa-brands fa-github"></i>
-
-                                </a>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="project-side-visual phone-visual">
-
-                            <div class="phone-frame">
-
-                                <div class="phone-screen">
-
-                                    <div class="phone-top">
-
-                                        <span></span>
-
-                                    </div>
-
-
-                                    <div class="phone-content">
-
-                                        <small>
-                                            COMPARE
-                                        </small>
-
-                                        <strong>
-                                            Mobile
-                                            Devices
-                                        </strong>
-
-                                        <div class="phone-line"></div>
-
-                                        <div class="phone-line short"></div>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- =================================================
-                         PROJECT 04
-                         ================================================= -->
-
-                    <article class="project-card reveal">
-
-                        <div class="project-index">
-                            04
-                        </div>
-
-
-                        <div class="project-main">
-
-                            <div class="project-top">
-
-                                <span class="project-category">
-                                    MACHINE LEARNING
-                                </span>
-
-                                <span class="project-year">
-                                    DEEP LEARNING
-                                </span>
-
-                            </div>
-
-
-                            <h3>
-                                Diabetes Risk Prediction
-                            </h3>
-
-
-                            <p>
-
-                                Built an end-to-end deep learning
-                                pipeline for diabetes risk prediction,
-                                including preprocessing, feature
-                                scaling, ANN model training, and
-                                deployment through Streamlit.
-
-                            </p>
-
-
-                            <div class="project-tech">
-
-                                <span>Python</span>
-                                <span>TensorFlow</span>
-                                <span>Keras</span>
-                                <span>Scikit-learn</span>
-                                <span>Streamlit</span>
-
-                            </div>
-
-
-                            <div class="project-actions">
-
-                                <a
-                                    href="https://banuprakashreddy1111-diabetes-prediction-dl-app-diabetes-4la35n.streamlit.app/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="project-link primary-link"
-                                >
-
-                                    Live demo
-
-                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-                                </a>
-
-
-                                <a
-                                    href="https://github.com/banuprakashreddy1111/diabetes_prediction_dl-"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="project-link"
-                                >
-
-                                    GitHub
-
-                                    <i class="fa-brands fa-github"></i>
-
-                                </a>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="project-side-visual ml-visual">
-
-                            <div class="neural-network">
-
-                                <div class="network-column">
-
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-
-                                </div>
-
-
-                                <div class="network-connections"></div>
-
-
-                                <div class="network-column">
-
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-
-                                </div>
-
-
-                                <div class="network-connections"></div>
-
-
-                                <div class="network-column">
-
-                                    <span></span>
-                                    <span></span>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- =================================================
-                         PROJECT 05
-                         ================================================= -->
-
-                    <article class="project-card reveal">
-
-                        <div class="project-index">
-                            05
-                        </div>
-
-
-                        <div class="project-main">
-
-                            <div class="project-top">
-
-                                <span class="project-category">
-                                    APPLICATION
-                                </span>
-
-                                <span class="project-year">
-                                    CROPRX
-                                </span>
-
-                            </div>
-
-
-                            <h3>
-                                CropRx
-                            </h3>
-
-
-                            <p>
-
-                                A practical technology project focused
-                                on using software and data-driven
-                                workflows to address an
-                                agriculture-related problem.
-
-                            </p>
-
-
-                            <div class="project-tech">
-
-                                <span>Python</span>
-                                <span>Application Development</span>
-                                <span>GitHub</span>
-
-                            </div>
-
-
-                            <div class="project-actions">
-
-                                <a
-                                    href="https://github.com/banuprakashreddy1111/CropRx"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="project-link primary-link"
-                                >
-
-                                    View repository
-
-                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
-                                </a>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="project-side-visual crop-visual">
-
-                            <div class="crop-grid">
-
-                                <span>01</span>
-                                <span>AI</span>
-                                <span>03</span>
-
-                                <span>04</span>
-                                <span>ML</span>
-                                <span>06</span>
-
-                                <span>07</span>
-                                <span>DATA</span>
-                                <span>09</span>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =================================================
-             EXPERIENCE
-             ================================================= -->
-
-        <section
-            id="experience"
-            class="section"
-        >
-
-            <div class="container">
-
-
-                <div class="section-heading reveal">
-
-                    <span class="section-kicker">
-                        04 / Experience
-                    </span>
-
-                    <h2>
-                        Experience that
-                        <span class="muted">
-                            shaped the approach.
-                        </span>
-                    </h2>
-
-                </div>
-
-
-                <div class="experience-card reveal">
-
-
-                    <div class="experience-meta">
-
-                        <span class="experience-date">
-                            Apr 2025 — Jan 2026
-                        </span>
-
-                        <span class="experience-location">
-                            Bengaluru, India
-                        </span>
-
-                        <span class="experience-type">
-                            INTERNSHIP
-                        </span>
-
-                    </div>
-
-
-                    <div class="experience-content">
-
-                        <h3>
-                            Data Scientist Intern
-                        </h3>
-
-                        <h4>
-                            Innomatics Research Labs
-                        </h4>
-
-
-                        <p>
-
-                            Worked across data analysis, SQL,
-                            Python automation, reporting, and
-                            machine-learning workflows while
-                            translating business and technical
-                            requirements into practical analytical
-                            outputs.
-
-                        </p>
-
-
-                        <ul class="experience-points">
-
-                            <li>
-
-                                <span></span>
-
-                                <div>
-                                    Processed and analyzed
-                                    <strong>
-                                        70,000+ records
-                                    </strong>
-                                    using Python and SQL.
-                                </div>
-
-                            </li>
-
-
-                            <li>
-
-                                <span></span>
-
-                                <div>
-                                    Built KPI dashboards and
-                                    analytical reports using
-                                    Power BI and Python
-                                    visualization tools.
-                                </div>
-
-                            </li>
-
-
-                            <li>
-
-                                <span></span>
-
-                                <div>
-                                    Automated repetitive data
-                                    workflows, reducing manual
-                                    reporting effort by approximately
-                                    <strong>
-                                        40%
-                                    </strong>.
-                                </div>
-
-                            </li>
-
-
-                            <li>
-
-                                <span></span>
-
-                                <div>
-                                    Applied SQL joins, CTEs,
-                                    aggregations, subqueries,
-                                    and analytical logic for
-                                    reporting and analysis.
-                                </div>
-
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =================================================
-             EDUCATION
-             ================================================= -->
-
-        <section
-            id="education"
-            class="section"
-        >
-
-            <div class="container">
-
-
-                <div class="section-heading reveal">
-
-                    <span class="section-kicker">
-                        05 / Education
-                    </span>
-
-                    <h2>
-                        Academic
-                        <span class="muted">
-                            foundation.
-                        </span>
-                    </h2>
-
-                </div>
-
-
-                <div class="education-card reveal">
-
-
-                    <div class="education-icon">
-
-                        <i class="fa-solid fa-graduation-cap"></i>
-
-                    </div>
-
-
-                    <div class="education-content">
-
-                        <span class="education-date">
-                            2022 — 2025
-                        </span>
-
-                        <h3>
-                            Bachelor of Technology
-                        </h3>
-
-                        <h4>
-                            Electrical and Electronics Engineering
-                        </h4>
-
-                        <p>
-                            QIS College of Engineering and Technology,
-                            Ongole
-                        </p>
-
-                    </div>
-
-
-                    <div class="education-score">
-
-                        <span>
-                            CGPA
-                        </span>
-
-                        <strong>
-                            8.1
-                        </strong>
-
-                        <small>
-                            / 10
-                        </small>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =================================================
-             CERTIFICATIONS
-             ================================================= -->
-
-        <section
-            id="certifications"
-            class="section"
-        >
-
-            <div class="container">
-
-
-                <div class="section-heading reveal">
-
-                    <span class="section-kicker">
-                        06 / Certifications
-                    </span>
-
-                    <h2>
-                        Continuous
-                        <span class="muted">
-                            learning.
-                        </span>
-                    </h2>
-
-                </div>
-
-
-                <div class="certifications-grid">
-
-
-                    <article class="cert-card reveal">
-
-                        <span class="cert-number">
-                            01
-                        </span>
-
-                        <div class="cert-icon">
-
-                            <i class="fa-brands fa-python"></i>
-
-                        </div>
-
-                        <h3>
-                            Python Programming & SQL
-                        </h3>
-
-                        <p>
-                            Programming, database querying,
-                            and analytical development.
-                        </p>
-
-                    </article>
-
-
-                    <article class="cert-card reveal">
-
-                        <span class="cert-number">
-                            02
-                        </span>
-
-                        <div class="cert-icon">
-
-                            <i class="fa-solid fa-wand-magic-sparkles"></i>
-
-                        </div>
-
-                        <h3>
-                            Generative AI Productivity Skills
-                        </h3>
-
-                        <p>
-                            Microsoft & LinkedIn Learning.
-                        </p>
-
-                    </article>
-
-
-                    <article class="cert-card reveal">
-
-                        <span class="cert-number">
-                            03
-                        </span>
-
-                        <div class="cert-icon">
-
-                            <i class="fa-solid fa-briefcase"></i>
-
-                        </div>
-
-                        <h3>
-                            Industry Job Simulations
-                        </h3>
-
-                        <p>
-                            Deloitte, BCGX, and PwC virtual
-                            experience programs.
-                        </p>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =================================================
-             CONTACT
-             ================================================= -->
-
-        <section
-            id="contact"
-            class="section contact-section"
-        >
-
-            <div class="container">
-
-
-                <div class="contact-card reveal">
-
-
-                    <div class="contact-background-number">
-                        07
-                    </div>
-
-
-                    <div class="contact-content">
-
-
-                        <span class="section-kicker">
-                            07 / Contact
-                        </span>
-
-
-                        <h2>
-
-                            Have a problem
-                            <span>
-                                worth solving?
-                            </span>
-
-                        </h2>
-
-
-                        <p>
-
-                            I'm open to opportunities in data
-                            analytics, data science, and
-                            data-driven technology roles.
-                            If you have a project, opportunity,
-                            or simply want to connect, feel free
-                            to reach out.
-
-                        </p>
 
 
                         <a
-                            href="mailto:banuprakashreddysonnapureddy@gmail.com"
-                            class="email-display"
+                            href="https://github.com/banuprakashreddy1111/amazon-price-analysis"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="project-link"
                         >
-
-                            <span class="email-label">
-                                Email
-                            </span>
-
-                            <span class="email-address">
-                                banuprakashreddysonnapureddy@gmail.com
-                            </span>
-
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-
+                            View repository
+                            <span>↗</span>
                         </a>
 
+                    </div>
 
-                        <div class="contact-actions">
+
+                    <div class="project-visual">
+
+                        <div class="visual-code">
+
+                            <span>price_analysis.py</span>
+
+                            <div>
+                                analyze(
+                                <b>prices</b>
+                                )
+                            </div>
+
+                            <div>
+                                identify(
+                                <b>trends</b>
+                                )
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Project 02 -->
+
+                <article class="project-card">
+
+                    <div class="project-index">
+                        02
+                    </div>
+
+
+                    <div class="project-main">
+
+                        <div class="project-meta">
+                            SQL ANALYTICS
+                            <span>MySQL</span>
+                        </div>
+
+                        <h3>
+                            Vehicle Tracking SQL Analysis
+                        </h3>
+
+                        <p>
+                            Designed a relational vehicle-tracking
+                            database and developed analytical SQL
+                            queries to evaluate vehicle performance,
+                            route delays, arrivals, and operational
+                            patterns.
+                        </p>
+
+
+                        <div class="project-tags">
+
+                            <span>MySQL</span>
+                            <span>SQL</span>
+                            <span>CTEs</span>
+                            <span>Window Functions</span>
+                            <span>Database Design</span>
+
+                        </div>
+
+
+                        <a
+                            href="https://github.com/banuprakashreddy1111/vehicle-tracking-sql-analysis"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="project-link"
+                        >
+                            View repository
+                            <span>↗</span>
+                        </a>
+
+                    </div>
+
+
+                    <div class="project-visual">
+
+                        <div class="visual-code sql-visual">
+
+                            <div>
+                                <span>SELECT</span>
+                                avg_delay
+                            </div>
+
+                            <div>
+                                <span>FROM</span>
+                                arrivals
+                            </div>
+
+                            <div>
+                                <span>GROUP BY</span>
+                                vehicle
+                            </div>
+
+                            <div>
+                                <span>ORDER BY</span>
+                                delay DESC
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Project 03 -->
+
+                <article class="project-card">
+
+                    <div class="project-index">
+                        03
+                    </div>
+
+
+                    <div class="project-main">
+
+                        <div class="project-meta">
+                            WEB APPLICATION
+                            <span>FastAPI</span>
+                        </div>
+
+                        <h3>
+                            Mobile Compare
+                        </h3>
+
+                        <p>
+                            Built a mobile comparison application
+                            that helps users compare phone
+                            specifications and indicative pricing
+                            while bringing multiple product
+                            attributes into one decision-making
+                            interface.
+                        </p>
+
+
+                        <div class="project-tags">
+
+                            <span>Python</span>
+                            <span>FastAPI</span>
+                            <span>JavaScript</span>
+                            <span>REST API</span>
+                            <span>HTML/CSS</span>
+                            <span>Render</span>
+
+                        </div>
+
+
+                        <div class="project-links">
 
                             <a
-                                href="mailto:banuprakashreddysonnapureddy@gmail.com"
-                                class="btn btn-primary"
-                            >
-
-                                Send me an email
-
-                                <i class="fa-solid fa-paper-plane"></i>
-
-                            </a>
-
-
-                            <a
-                                href="https://www.linkedin.com/in/sonnapureddybanuprakashreddy/"
+                                href="https://mobile-compare-ejiy.onrender.com/"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                class="btn btn-secondary"
+                                class="project-link"
                             >
-
-                                LinkedIn
-
-                                <i class="fa-brands fa-linkedin-in"></i>
-
+                                Live demo
+                                <span>↗</span>
                             </a>
 
-
                             <a
-                                href="BanuPrakashReddy_resume.pdf"
+                                href="https://github.com/banuprakashreddy1111/mobile-compare"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                class="btn btn-secondary"
+                                class="project-link"
                             >
-
-                                View Resume
-
-                                <i class="fa-solid fa-file-lines"></i>
-
+                                GitHub
+                                <span>↗</span>
                             </a>
 
                         </div>
 
                     </div>
+
+
+                    <div class="project-visual">
+
+                        <div class="compare-visual">
+
+                            <span>COMPARE</span>
+
+                            <strong>
+                                Mobile
+                            </strong>
+
+                            <strong>
+                                Devices
+                            </strong>
+
+                            <div class="compare-bars">
+                                <i></i>
+                                <i></i>
+                                <i></i>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Project 04 -->
+
+                <article class="project-card">
+
+                    <div class="project-index">
+                        04
+                    </div>
+
+
+                    <div class="project-main">
+
+                        <div class="project-meta">
+                            MACHINE LEARNING
+                            <span>Deep Learning</span>
+                        </div>
+
+                        <h3>
+                            Diabetes Risk Prediction
+                        </h3>
+
+                        <p>
+                            Built an end-to-end deep learning pipeline
+                            for diabetes risk prediction, including
+                            preprocessing, feature scaling, ANN model
+                            training, and deployment through Streamlit.
+                        </p>
+
+
+                        <div class="project-tags">
+
+                            <span>Python</span>
+                            <span>TensorFlow</span>
+                            <span>Keras</span>
+                            <span>Scikit-learn</span>
+                            <span>Streamlit</span>
+
+                        </div>
+
+
+                        <div class="project-links">
+
+                            <a
+                                href="https://banuprakashreddy1111-diabetes-prediction-dl-app-diabetes-4la35n.streamlit.app/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="project-link"
+                            >
+                                Live demo
+                                <span>↗</span>
+                            </a>
+
+                            <a
+                                href="https://github.com/banuprakashreddy1111/diabetes_prediction_dl-"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="project-link"
+                            >
+                                GitHub
+                                <span>↗</span>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="project-visual">
+
+                        <div class="ml-visual">
+
+                            <div class="ml-node">
+                                DATA
+                            </div>
+
+                            <div class="ml-line"></div>
+
+                            <div class="ml-node">
+                                ANN
+                            </div>
+
+                            <div class="ml-line"></div>
+
+                            <div class="ml-node">
+                                RISK
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Project 05 -->
+
+                <article class="project-card">
+
+                    <div class="project-index">
+                        05
+                    </div>
+
+
+                    <div class="project-main">
+
+                        <div class="project-meta">
+                            APPLICATION
+                            <span>CropRx</span>
+                        </div>
+
+                        <h3>
+                            CropRx
+                        </h3>
+
+                        <p>
+                            A practical technology project focused on
+                            using software and data-driven workflows
+                            to address an agriculture-related problem.
+                        </p>
+
+
+                        <div class="project-tags">
+
+                            <span>Python</span>
+                            <span>Application Development</span>
+                            <span>GitHub</span>
+
+                        </div>
+
+
+                        <a
+                            href="https://github.com/banuprakashreddy1111/CropRx"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="project-link"
+                        >
+                            View repository
+                            <span>↗</span>
+                        </a>
+
+                    </div>
+
+
+                    <div class="project-visual">
+
+                        <div class="crop-visual">
+
+                            <span>
+                                CROP
+                            </span>
+
+                            <strong>
+                                RX
+                            </strong>
+
+                            <small>
+                                DATA × AGRICULTURE
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="project-counter">
+
+                <span>01</span>
+                <span>02</span>
+                <span>03</span>
+                <span>04</span>
+                <span>05</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             EXPERIENCE
+        ====================================================== -->
+
+        <section
+            class="section content-section dark-section"
+            id="experience"
+        >
+
+            <div class="section-heading">
+
+                <span class="section-number">
+                    04 / Experience
+                </span>
+
+                <h2>
+                    Experience that
+                    <span>shaped the approach.</span>
+                </h2>
+
+            </div>
+
+
+            <article class="experience-card">
+
+                <div class="experience-date">
+
+                    <span>
+                        Apr 2025 — Jan 2026
+                    </span>
+
+                    <span>
+                        Bengaluru, India
+                    </span>
+
+                </div>
+
+
+                <div class="experience-label">
+                    INTERNSHIP
+                </div>
+
+
+                <div class="experience-content">
+
+                    <h3>
+                        Data Scientist Intern
+                    </h3>
+
+                    <h4>
+                        Innomatics Research Labs
+                    </h4>
+
+
+                    <p>
+                        Worked across data analysis, SQL, Python
+                        automation, reporting, and machine-learning
+                        workflows while translating business and
+                        technical requirements into practical
+                        analytical outputs.
+                    </p>
+
+
+                    <ul>
+
+                        <li>
+                            Processed and analyzed
+                            <strong>70,000+ records</strong>
+                            using Python and SQL.
+                        </li>
+
+                        <li>
+                            Built KPI dashboards and analytical
+                            reports using Power BI and Python
+                            visualization tools.
+                        </li>
+
+                        <li>
+                            Automated repetitive data workflows,
+                            reducing manual reporting effort by
+                            approximately <strong>40%</strong>.
+                        </li>
+
+                        <li>
+                            Applied SQL joins, CTEs, aggregations,
+                            subqueries, and analytical logic for
+                            reporting and analysis.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- =====================================================
+             EDUCATION
+        ====================================================== -->
+
+        <section
+            class="section content-section"
+            id="education"
+        >
+
+            <div class="section-heading">
+
+                <span class="section-number">
+                    05 / Education
+                </span>
+
+                <h2>
+                    Academic
+                    <span>foundation.</span>
+                </h2>
+
+            </div>
+
+
+            <div class="education-card">
+
+                <div class="education-year">
+                    2022 — 2025
+                </div>
+
+
+                <div class="education-content">
+
+                    <span class="education-label">
+                        BACHELOR OF TECHNOLOGY
+                    </span>
+
+                    <h3>
+                        Electrical and Electronics Engineering
+                    </h3>
+
+                    <h4>
+                        QIS College of Engineering and Technology,
+                        Ongole
+                    </h4>
+
+                </div>
+
+
+                <div class="education-score">
+
+                    <span>
+                        CGPA
+                    </span>
+
+                    <strong>
+                        8.1
+                    </strong>
+
+                    <small>
+                        / 10
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CERTIFICATIONS
+        ====================================================== -->
+
+        <section
+            class="section content-section dark-section"
+            id="certifications"
+        >
+
+            <div class="section-heading">
+
+                <span class="section-number">
+                    06 / Certifications
+                </span>
+
+                <h2>
+                    Continuous
+                    <span>learning.</span>
+                </h2>
+
+            </div>
+
+
+            <div class="certifications-grid">
+
+
+                <article class="certification-card">
+
+                    <span>
+                        01
+                    </span>
+
+                    <h3>
+                        Python Programming & SQL
+                    </h3>
+
+                    <p>
+                        Programming, database querying, and
+                        analytical development.
+                    </p>
+
+                </article>
+
+
+                <article class="certification-card">
+
+                    <span>
+                        02
+                    </span>
+
+                    <h3>
+                        Generative AI Productivity Skills
+                    </h3>
+
+                    <p>
+                        Microsoft & LinkedIn Learning.
+                    </p>
+
+                </article>
+
+
+                <article class="certification-card">
+
+                    <span>
+                        03
+                    </span>
+
+                    <h3>
+                        Industry Job Simulations
+                    </h3>
+
+                    <p>
+                        Deloitte, BCGX, and PwC virtual experience
+                        programs.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CONTACT
+        ====================================================== -->
+
+        <section
+            class="section contact-section"
+            id="contact"
+        >
+
+            <div class="contact-number">
+                07
+            </div>
+
+
+            <div class="contact-content">
+
+                <span class="section-number">
+                    07 / Contact
+                </span>
+
+
+                <h2>
+                    Have a problem
+                    <span>worth solving?</span>
+                </h2>
+
+
+                <p>
+                    I'm open to opportunities in data analytics,
+                    data science, and data-driven technology roles.
+                    If you have a project, opportunity, or simply
+                    want to connect, feel free to reach out.
+                </p>
+
+
+                <a
+                    href="mailto:banuprakashreddysonnapureddy@gmail.com"
+                    class="contact-email"
+                >
+                    banuprakashreddysonnapureddy@gmail.com
+                    <span>↗</span>
+                </a>
+
+
+                <div class="contact-actions">
+
+                    <a
+                        href="mailto:banuprakashreddysonnapureddy@gmail.com"
+                        class="btn btn-primary"
+                    >
+                        Send me an email
+                        <span>→</span>
+                    </a>
+
+
+                    <a
+                        href="https://www.linkedin.com/in/sonnapureddybanuprakashreddy/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-secondary"
+                    >
+                        LinkedIn
+                        <span>↗</span>
+                    </a>
 
                 </div>
 
@@ -2241,20 +1671,19 @@
     </main>
 
 
-    <!-- =====================================================
+    <!-- =========================================================
          FOOTER
-         ===================================================== -->
+    ========================================================== -->
 
     <footer class="site-footer">
 
-        <div class="container footer-container">
-
+        <div class="footer-top">
 
             <div class="footer-brand">
 
-                <span class="brand-mark">
+                <div class="footer-logo">
                     B
-                </span>
+                </div>
 
                 <div>
 
@@ -2281,74 +1710,37 @@
 
             </div>
 
-
-            <div class="footer-socials">
-
-                <a
-                    href="https://github.com/banuprakashreddy1111"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="GitHub"
-                >
-
-                    <i class="fa-brands fa-github"></i>
-
-                </a>
+        </div>
 
 
-                <a
-                    href="https://www.linkedin.com/in/sonnapureddybanuprakashreddy/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="LinkedIn"
-                >
+        <div class="footer-bottom">
 
-                    <i class="fa-brands fa-linkedin-in"></i>
+            <span>
+                © 2026 Banu Prakash Reddy
+            </span>
 
-                </a>
-
-            </div>
-
-
-            <div class="footer-bottom">
-
-                <span>
-                    © <span data-current-year>2026</span>
-                    Banu Prakash Reddy
-                </span>
-
-                <span>
-                    Built with data, code & curiosity.
-                </span>
-
-            </div>
+            <span>
+                Built with data, code & curiosity.
+            </span>
 
         </div>
 
     </footer>
 
 
-    <!-- =====================================================
-         BACK TO TOP
-         ===================================================== -->
+    <!-- Back to top -->
 
     <button
         class="back-to-top"
+        id="backToTop"
         type="button"
         aria-label="Back to top"
     >
-
-        <i class="fa-solid fa-arrow-up"></i>
-
+        ↑
     </button>
 
-
-    <!-- =====================================================
-         JAVASCRIPT
-         ===================================================== -->
 
     <script src="script.js"></script>
 
 </body>
-
 </html>
