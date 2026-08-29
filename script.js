@@ -1,49 +1,59 @@
 /* ============================================================
-   BANU PRAKASH REDDY — PORTFOLIO
-   PREMIUM DATA / AI PORTFOLIO SYSTEM
-   script.js
-   ============================================================ */
-
-
-/* ============================================================
-   01. DOM READY
+   BANU PRAKASH REDDY — PREMIUM DATA / AI PORTFOLIO
+   SCRIPT SYSTEM
    ============================================================ */
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    initPageLoader();
-    initHeaderScroll();
+    initLoader();
+
+    initHeader();
+
     initMobileMenu();
+
     initSmoothScroll();
+
     initScrollReveal();
+
     initActiveNavigation();
+
     initBackToTop();
-    initHeroParallax();
-    initCardTilt();
+
+    initHeroInteraction();
+
+    initCardInteraction();
+
+    initEmailCopy();
+
     initCurrentYear();
-    initCopyEmail();
-    initKeyboardAccessibility();
+
+    initExternalLinks();
 
 });
 
 
 /* ============================================================
-   02. PAGE LOADER
+   01. PAGE LOADER
    ============================================================ */
 
-function initPageLoader() {
+function initLoader() {
 
-    const loader = document.querySelector(".page-loader");
+    const loader =
+        document.querySelector(".page-loader");
 
     if (!loader) return;
+
 
     const hideLoader = () => {
 
         setTimeout(() => {
+
             loader.classList.add("loaded");
-        }, 450);
+
+        }, 400);
 
     };
+
 
     if (document.readyState === "complete") {
 
@@ -51,9 +61,13 @@ function initPageLoader() {
 
     } else {
 
-        window.addEventListener("load", hideLoader, {
-            once: true
-        });
+        window.addEventListener(
+            "load",
+            hideLoader,
+            {
+                once: true
+            }
+        );
 
     }
 
@@ -61,18 +75,20 @@ function initPageLoader() {
 
 
 /* ============================================================
-   03. HEADER SCROLL EFFECT
+   02. HEADER
    ============================================================ */
 
-function initHeaderScroll() {
+function initHeader() {
 
-    const header = document.querySelector(".site-header");
+    const header =
+        document.querySelector(".site-header");
 
     if (!header) return;
 
+
     const updateHeader = () => {
 
-        if (window.scrollY > 40) {
+        if (window.scrollY > 35) {
 
             header.classList.add("scrolled");
 
@@ -84,7 +100,9 @@ function initHeaderScroll() {
 
     };
 
+
     updateHeader();
+
 
     window.addEventListener(
         "scroll",
@@ -98,105 +116,123 @@ function initHeaderScroll() {
 
 
 /* ============================================================
-   04. MOBILE NAVIGATION
+   03. MOBILE MENU
    ============================================================ */
 
 function initMobileMenu() {
 
-    const menuToggle = document.querySelector(".menu-toggle");
-    const navMenu = document.querySelector(".nav-menu");
+    const toggle =
+        document.querySelector(".menu-toggle");
 
-    if (!menuToggle || !navMenu) return;
+    const menu =
+        document.querySelector(".nav-menu");
 
 
-    const openMenu = () => {
-
-        menuToggle.classList.add("active");
-        navMenu.classList.add("open");
-
-        menuToggle.setAttribute(
-            "aria-expanded",
-            "true"
-        );
-
-        document.body.classList.add("menu-open");
-
-    };
+    if (!toggle || !menu) return;
 
 
     const closeMenu = () => {
 
-        menuToggle.classList.remove("active");
-        navMenu.classList.remove("open");
+        toggle.classList.remove("active");
 
-        menuToggle.setAttribute(
+        menu.classList.remove("open");
+
+        document.body.classList.remove(
+            "menu-open"
+        );
+
+        toggle.setAttribute(
             "aria-expanded",
             "false"
         );
 
-        document.body.classList.remove("menu-open");
+    };
+
+
+    const openMenu = () => {
+
+        toggle.classList.add("active");
+
+        menu.classList.add("open");
+
+        document.body.classList.add(
+            "menu-open"
+        );
+
+        toggle.setAttribute(
+            "aria-expanded",
+            "true"
+        );
 
     };
 
 
-    menuToggle.addEventListener("click", () => {
+    toggle.addEventListener(
+        "click",
+        () => {
 
-        const isOpen =
-            navMenu.classList.contains("open");
+            const isOpen =
+                menu.classList.contains("open");
 
-        if (isOpen) {
 
-            closeMenu();
+            if (isOpen) {
 
-        } else {
+                closeMenu();
 
-            openMenu();
+            } else {
+
+                openMenu();
+
+            }
 
         }
+    );
 
-    });
 
+    menu
+        .querySelectorAll(".nav-link")
+        .forEach(link => {
 
-    const navLinks =
-        navMenu.querySelectorAll(".nav-link");
-
-    navLinks.forEach(link => {
-
-        link.addEventListener("click", () => {
-
-            closeMenu();
+            link.addEventListener(
+                "click",
+                closeMenu
+            );
 
         });
 
-    });
 
+    document.addEventListener(
+        "keydown",
+        event => {
 
-    document.addEventListener("keydown", event => {
+            if (event.key === "Escape") {
 
-        if (event.key === "Escape") {
+                closeMenu();
 
-            closeMenu();
-
-        }
-
-    });
-
-
-    window.addEventListener("resize", () => {
-
-        if (window.innerWidth > 800) {
-
-            closeMenu();
+            }
 
         }
+    );
 
-    });
+
+    window.addEventListener(
+        "resize",
+        () => {
+
+            if (window.innerWidth > 800) {
+
+                closeMenu();
+
+            }
+
+        }
+    );
 
 }
 
 
 /* ============================================================
-   05. SMOOTH SCROLL
+   04. SMOOTH SCROLL
    ============================================================ */
 
 function initSmoothScroll() {
@@ -206,59 +242,66 @@ function initSmoothScroll() {
             'a[href^="#"]'
         );
 
-    if (!links.length) return;
-
 
     links.forEach(link => {
 
-        link.addEventListener("click", event => {
+        link.addEventListener(
+            "click",
+            event => {
 
-            const targetId =
-                link.getAttribute("href");
+                const id =
+                    link.getAttribute("href");
 
-            if (
-                !targetId ||
-                targetId === "#"
-            ) {
-                return;
+
+                if (
+                    !id ||
+                    id === "#"
+                ) {
+
+                    return;
+
+                }
+
+
+                const target =
+                    document.querySelector(id);
+
+
+                if (!target) return;
+
+
+                event.preventDefault();
+
+
+                const header =
+                    document.querySelector(
+                        ".site-header"
+                    );
+
+
+                const headerHeight =
+                    header
+                        ? header.offsetHeight
+                        : 0;
+
+
+                const position =
+                    target.getBoundingClientRect().top +
+                    window.scrollY -
+                    headerHeight -
+                    12;
+
+
+                window.scrollTo({
+
+                    top: position,
+
+                    behavior: "smooth"
+
+                });
+
             }
-
-
-            const target =
-                document.querySelector(targetId);
-
-            if (!target) return;
-
-            event.preventDefault();
-
-
-            const header =
-                document.querySelector(
-                    ".site-header"
-                );
-
-            const headerHeight =
-                header
-                    ? header.offsetHeight
-                    : 0;
-
-
-            const targetPosition =
-                target.getBoundingClientRect().top +
-                window.scrollY -
-                headerHeight -
-                15;
-
-
-            window.scrollTo({
-
-                top: targetPosition,
-
-                behavior: "smooth"
-
-            });
-
-        });
+        );
 
     });
 
@@ -266,26 +309,33 @@ function initSmoothScroll() {
 
 
 /* ============================================================
-   06. SCROLL REVEAL
+   05. SCROLL REVEAL
    ============================================================ */
 
 function initScrollReveal() {
 
-    const revealElements =
-        document.querySelectorAll(".reveal");
+    const elements =
+        document.querySelectorAll(
+            ".reveal"
+        );
 
-    if (!revealElements.length) return;
+
+    if (!elements.length) return;
 
 
-    if (
+    const reducedMotion =
         window.matchMedia(
             "(prefers-reduced-motion: reduce)"
-        ).matches
-    ) {
+        ).matches;
 
-        revealElements.forEach(element => {
 
-            element.classList.add("visible");
+    if (reducedMotion) {
+
+        elements.forEach(element => {
+
+            element.classList.add(
+                "visible"
+            );
 
         });
 
@@ -300,13 +350,19 @@ function initScrollReveal() {
 
                 entries.forEach(entry => {
 
-                    if (!entry.isIntersecting) {
+                    if (
+                        !entry.isIntersecting
+                    ) {
+
                         return;
+
                     }
+
 
                     entry.target.classList.add(
                         "visible"
                     );
+
 
                     observer.unobserve(
                         entry.target
@@ -319,12 +375,12 @@ function initScrollReveal() {
                 threshold: 0.12,
 
                 rootMargin:
-                    "0px 0px -50px 0px"
+                    "0px 0px -40px 0px"
             }
         );
 
 
-    revealElements.forEach(element => {
+    elements.forEach(element => {
 
         observer.observe(element);
 
@@ -334,45 +390,45 @@ function initScrollReveal() {
 
 
 /* ============================================================
-   07. ACTIVE NAVIGATION
+   06. ACTIVE NAVIGATION
    ============================================================ */
 
 function initActiveNavigation() {
 
-    const navLinks =
+    const links =
         document.querySelectorAll(
             ".nav-link"
         );
-
-    if (!navLinks.length) return;
 
 
     const sections = [];
 
 
-    navLinks.forEach(link => {
+    links.forEach(link => {
 
         const href =
             link.getAttribute("href");
+
 
         if (
             !href ||
             !href.startsWith("#")
         ) {
+
             return;
+
         }
 
 
         const section =
             document.querySelector(href);
 
+
         if (section) {
 
             sections.push({
-
-                section,
-                link
-
+                link,
+                section
             });
 
         }
@@ -383,48 +439,51 @@ function initActiveNavigation() {
     if (!sections.length) return;
 
 
-    const updateActiveLink = () => {
+    const updateActive = () => {
 
-        const scrollPosition =
+        const position =
             window.scrollY +
-            window.innerHeight * 0.35;
+            window.innerHeight * 0.3;
 
 
-        let currentSection = null;
+        let current = null;
 
 
         sections.forEach(item => {
 
-            const sectionTop =
+            const top =
                 item.section.offsetTop;
 
-            const sectionHeight =
+
+            const bottom =
+                top +
                 item.section.offsetHeight;
 
 
             if (
-                scrollPosition >= sectionTop &&
-                scrollPosition <
-                    sectionTop + sectionHeight
+                position >= top &&
+                position < bottom
             ) {
 
-                currentSection = item;
+                current = item;
 
             }
 
         });
 
 
-        navLinks.forEach(link => {
+        links.forEach(link => {
 
-            link.classList.remove("active");
+            link.classList.remove(
+                "active"
+            );
 
         });
 
 
-        if (currentSection) {
+        if (current) {
 
-            currentSection.link.classList.add(
+            current.link.classList.add(
                 "active"
             );
 
@@ -433,12 +492,12 @@ function initActiveNavigation() {
     };
 
 
-    updateActiveLink();
+    updateActive();
 
 
     window.addEventListener(
         "scroll",
-        updateActiveLink,
+        updateActive,
         {
             passive: true
         }
@@ -448,7 +507,7 @@ function initActiveNavigation() {
 
 
 /* ============================================================
-   08. BACK TO TOP
+   07. BACK TO TOP
    ============================================================ */
 
 function initBackToTop() {
@@ -458,14 +517,17 @@ function initBackToTop() {
             ".back-to-top"
         );
 
+
     if (!button) return;
 
 
-    const updateVisibility = () => {
+    const update = () => {
 
         if (window.scrollY > 600) {
 
-            button.classList.add("visible");
+            button.classList.add(
+                "visible"
+            );
 
         } else {
 
@@ -478,12 +540,12 @@ function initBackToTop() {
     };
 
 
-    updateVisibility();
+    update();
 
 
     window.addEventListener(
         "scroll",
-        updateVisibility,
+        update,
         {
             passive: true
         }
@@ -509,122 +571,24 @@ function initBackToTop() {
 
 
 /* ============================================================
-   09. HERO PARALLAX
+   08. HERO INTERACTION
    ============================================================ */
 
-function initHeroParallax() {
+function initHeroInteraction() {
 
     const visual =
         document.querySelector(
             ".hero-visual"
         );
 
-    if (!visual) return;
 
-
-    if (
-        window.matchMedia(
-            "(prefers-reduced-motion: reduce)"
-        ).matches
-    ) {
-        return;
-    }
-
-
-    if (window.innerWidth <= 800) {
-        return;
-    }
-
-
-    let ticking = false;
-
-
-    const updateParallax = () => {
-
-        const scrollY =
-            window.scrollY;
-
-
-        const hero =
-            document.querySelector(
-                ".hero"
-            );
-
-
-        if (!hero) return;
-
-
-        const heroBottom =
-            hero.offsetTop +
-            hero.offsetHeight;
-
-
-        if (scrollY > heroBottom) {
-
-            ticking = false;
-
-            return;
-
-        }
-
-
-        const movement =
-            Math.min(scrollY * 0.12, 60);
-
-
-        visual.style.transform =
-            `translateY(${movement}px)`;
-
-
-        ticking = false;
-
-    };
-
-
-    window.addEventListener(
-        "scroll",
-        () => {
-
-            if (!ticking) {
-
-                window.requestAnimationFrame(
-                    updateParallax
-                );
-
-                ticking = true;
-
-            }
-
-        },
-        {
-            passive: true
-        }
-    );
-
-}
-
-
-/* ============================================================
-   10. PREMIUM CARD TILT
-   ============================================================ */
-
-function initCardTilt() {
-
-    const cards =
-        document.querySelectorAll(
-            ".skill-card, .cert-card"
+    const orbit =
+        document.querySelector(
+            ".data-orbit"
         );
 
-    if (!cards.length) return;
 
-
-    if (
-        window.matchMedia(
-            "(prefers-reduced-motion: reduce)"
-        ).matches
-    ) {
-        return;
-    }
+    if (!visual || !orbit) return;
 
 
     if (
@@ -632,12 +596,119 @@ function initCardTilt() {
             "(hover: none)"
         ).matches
     ) {
+
         return;
+
+    }
+
+
+    if (
+        window.matchMedia(
+            "(prefers-reduced-motion: reduce)"
+        ).matches
+    ) {
+
+        return;
+
+    }
+
+
+    visual.addEventListener(
+        "mousemove",
+        event => {
+
+            const rect =
+                visual.getBoundingClientRect();
+
+
+            const x =
+                event.clientX -
+                rect.left;
+
+
+            const y =
+                event.clientY -
+                rect.top;
+
+
+            const centerX =
+                rect.width / 2;
+
+
+            const centerY =
+                rect.height / 2;
+
+
+            const rotateX =
+                ((y - centerY) /
+                    centerY) *
+                -2;
+
+
+            const rotateY =
+                ((x - centerX) /
+                    centerX) *
+                2;
+
+
+            orbit.style.transform =
+                `rotateX(${rotateX}deg)
+                 rotateY(${rotateY}deg)`;
+
+        }
+    );
+
+
+    visual.addEventListener(
+        "mouseleave",
+        () => {
+
+            orbit.style.transform = "";
+
+        }
+    );
+
+}
+
+
+/* ============================================================
+   09. CARD INTERACTION
+   ============================================================ */
+
+function initCardInteraction() {
+
+    const cards =
+        document.querySelectorAll(
+            ".skill-card, .cert-card"
+        );
+
+
+    if (!cards.length) return;
+
+
+    if (
+        window.matchMedia(
+            "(hover: none)"
+        ).matches
+    ) {
+
+        return;
+
+    }
+
+
+    if (
+        window.matchMedia(
+            "(prefers-reduced-motion: reduce)"
+        ).matches
+    ) {
+
+        return;
+
     }
 
 
     cards.forEach(card => {
-
 
         card.addEventListener(
             "mousemove",
@@ -668,13 +739,13 @@ function initCardTilt() {
                 const rotateX =
                     ((y - centerY) /
                         centerY) *
-                    -3;
+                    -2;
 
 
                 const rotateY =
                     ((x - centerX) /
                         centerX) *
-                    3;
+                    2;
 
 
                 card.style.transform =
@@ -702,125 +773,41 @@ function initCardTilt() {
 
 
 /* ============================================================
-   11. CURRENT YEAR
+   10. EMAIL COPY
    ============================================================ */
 
-function initCurrentYear() {
+function initEmailCopy() {
 
-    const yearElements =
-        document.querySelectorAll(
-            "[data-current-year]"
-        );
-
-
-    if (!yearElements.length) return;
-
-
-    const currentYear =
-        new Date().getFullYear();
-
-
-    yearElements.forEach(element => {
-
-        element.textContent =
-            currentYear;
-
-    });
-
-}
-
-
-/* ============================================================
-   12. COPY EMAIL
-   ============================================================ */
-
-function initCopyEmail() {
-
-    const emailDisplay =
+    const emailBox =
         document.querySelector(
             ".email-display"
         );
 
 
-    if (!emailDisplay) return;
+    if (!emailBox) return;
 
 
-    const emailAddress =
-        emailDisplay.querySelector(
+    const emailElement =
+        emailBox.querySelector(
             ".email-address"
         );
 
 
-    if (!emailAddress) return;
+    if (!emailElement) return;
 
 
     const email =
-        emailAddress.textContent.trim();
+        emailElement.textContent.trim();
 
 
     if (!email) return;
 
 
-    emailDisplay.style.cursor = "pointer";
+    emailBox.addEventListener(
+        "contextmenu",
+        () => {
 
-
-    emailDisplay.setAttribute(
-        "role",
-        "button"
-    );
-
-
-    emailDisplay.setAttribute(
-        "tabindex",
-        "0"
-    );
-
-
-    const copyEmail = async () => {
-
-        try {
-
-            await navigator.clipboard.writeText(
-                email
-            );
-
-
-            showCopyFeedback(
-                emailDisplay
-            );
-
-        } catch (error) {
-
-            fallbackCopyEmail(
-                email,
-                emailDisplay
-            );
-
-        }
-
-    };
-
-
-    emailDisplay.addEventListener(
-        "click",
-        copyEmail
-    );
-
-
-    emailDisplay.addEventListener(
-        "keydown",
-        event => {
-
-            if (
-                event.key === "Enter" ||
-                event.key === " "
-            ) {
-
-                event.preventDefault();
-
-                copyEmail();
-
-            }
+            copyEmail(email);
 
         }
     );
@@ -829,82 +816,21 @@ function initCopyEmail() {
 
 
 /* ============================================================
-   13. COPY FEEDBACK
+   11. COPY EMAIL
    ============================================================ */
 
-function showCopyFeedback(element) {
-
-    const originalHTML =
-        element.innerHTML;
-
-
-    element.classList.add(
-        "email-copied"
-    );
-
-
-    const icon =
-        element.querySelector("i");
-
-
-    if (icon) {
-
-        icon.className =
-            "fa-solid fa-check";
-
-    }
-
-
-    setTimeout(() => {
-
-        element.innerHTML =
-            originalHTML;
-
-        element.classList.remove(
-            "email-copied"
-        );
-
-    }, 1600);
-
-}
-
-
-/* ============================================================
-   14. FALLBACK COPY
-   ============================================================ */
-
-function fallbackCopyEmail(
-    email,
-    element
-) {
-
-    const textarea =
-        document.createElement(
-            "textarea"
-        );
-
-
-    textarea.value = email;
-
-    textarea.style.position =
-        "fixed";
-
-    textarea.style.opacity = "0";
-
-
-    document.body.appendChild(
-        textarea
-    );
-
-
-    textarea.select();
-
+async function copyEmail(email) {
 
     try {
 
-        document.execCommand("copy");
+        await navigator.clipboard.writeText(
+            email
+        );
 
-        showCopyFeedback(element);
+
+        console.log(
+            "Email copied successfully."
+        );
 
     } catch (error) {
 
@@ -915,199 +841,28 @@ function fallbackCopyEmail(
 
     }
 
-
-    document.body.removeChild(
-        textarea
-    );
-
 }
 
 
 /* ============================================================
-   15. KEYBOARD ACCESSIBILITY
+   12. CURRENT YEAR
    ============================================================ */
 
-function initKeyboardAccessibility() {
+function initCurrentYear() {
 
-    const menuToggle =
-        document.querySelector(
-            ".menu-toggle"
-        );
-
-
-    if (
-        menuToggle &&
-        !menuToggle.hasAttribute(
-            "aria-label"
-        )
-    ) {
-
-        menuToggle.setAttribute(
-            "aria-label",
-            "Toggle navigation menu"
-        );
-
-    }
-
-
-    if (
-        menuToggle &&
-        !menuToggle.hasAttribute(
-            "aria-expanded"
-        )
-    ) {
-
-        menuToggle.setAttribute(
-            "aria-expanded",
-            "false"
-        );
-
-    }
-
-}
-
-
-/* ============================================================
-   16. MOUSE GLOW EFFECT
-   ============================================================ */
-
-function initMouseGlow() {
-
-    const background =
-        document.querySelector(
-            ".background"
-        );
-
-
-    if (!background) return;
-
-
-    if (
-        window.matchMedia(
-            "(hover: none)"
-        ).matches
-    ) {
-        return;
-    }
-
-
-    if (
-        window.matchMedia(
-            "(prefers-reduced-motion: reduce)"
-        ).matches
-    ) {
-        return;
-    }
-
-
-    let glow =
-        document.querySelector(
-            ".mouse-glow"
-        );
-
-
-    if (!glow) {
-
-        glow =
-            document.createElement(
-                "div"
-            );
-
-        glow.className =
-            "mouse-glow";
-
-
-        Object.assign(
-            glow.style,
-            {
-
-                position: "fixed",
-
-                width: "280px",
-
-                height: "280px",
-
-                borderRadius: "50%",
-
-                pointerEvents: "none",
-
-                zIndex: "-5",
-
-                background:
-                    "radial-gradient(circle, rgba(105,231,200,0.045), transparent 70%)",
-
-                transform:
-                    "translate(-50%, -50%)",
-
-                transition:
-                    "left 120ms ease-out, top 120ms ease-out"
-
-            }
-        );
-
-
-        background.appendChild(
-            glow
-        );
-
-    }
-
-
-    document.addEventListener(
-        "mousemove",
-        event => {
-
-            glow.style.left =
-                `${event.clientX}px`;
-
-            glow.style.top =
-                `${event.clientY}px`;
-
-        }
-    );
-
-}
-
-
-/* ============================================================
-   17. PROJECT HOVER INTERACTION
-   ============================================================ */
-
-function initProjectInteraction() {
-
-    const projects =
+    const elements =
         document.querySelectorAll(
-            ".project-card"
+            "[data-current-year]"
         );
 
 
-    if (!projects.length) return;
+    const year =
+        new Date().getFullYear();
 
 
-    projects.forEach(project => {
+    elements.forEach(element => {
 
-        project.addEventListener(
-            "mouseenter",
-            () => {
-
-                project.classList.add(
-                    "project-active"
-                );
-
-            }
-        );
-
-
-        project.addEventListener(
-            "mouseleave",
-            () => {
-
-                project.classList.remove(
-                    "project-active"
-                );
-
-            }
-        );
+        element.textContent = year;
 
     });
 
@@ -1115,230 +870,7 @@ function initProjectInteraction() {
 
 
 /* ============================================================
-   18. EXPERIENCE TIMELINE EFFECT
-   ============================================================ */
-
-function initExperienceAnimation() {
-
-    const experience =
-        document.querySelector(
-            ".experience-card"
-        );
-
-
-    if (!experience) return;
-
-
-    const observer =
-        new IntersectionObserver(
-            entries => {
-
-                entries.forEach(entry => {
-
-                    if (
-                        entry.isIntersecting
-                    ) {
-
-                        experience.classList.add(
-                            "experience-visible"
-                        );
-
-                        observer.unobserve(
-                            experience
-                        );
-
-                    }
-
-                });
-
-            },
-            {
-                threshold: 0.2
-            }
-        );
-
-
-    observer.observe(
-        experience
-    );
-
-}
-
-
-/* ============================================================
-   19. STAT COUNTER ANIMATION
-   ============================================================ */
-
-function initStatCounters() {
-
-    const counters =
-        document.querySelectorAll(
-            ".stat-number[data-count]"
-        );
-
-
-    if (!counters.length) return;
-
-
-    const prefersReducedMotion =
-        window.matchMedia(
-            "(prefers-reduced-motion: reduce)"
-        ).matches;
-
-
-    if (prefersReducedMotion) {
-
-        counters.forEach(counter => {
-
-            counter.textContent =
-                counter.dataset.count;
-
-        });
-
-        return;
-
-    }
-
-
-    const animateCounter = counter => {
-
-        const target =
-            parseFloat(
-                counter.dataset.count
-            );
-
-
-        if (Number.isNaN(target)) return;
-
-
-        const suffix =
-            counter.dataset.suffix || "";
-
-
-        const prefix =
-            counter.dataset.prefix || "";
-
-
-        const duration = 1300;
-
-        const startTime =
-            performance.now();
-
-
-        const update = currentTime => {
-
-            const elapsed =
-                currentTime -
-                startTime;
-
-
-            const progress =
-                Math.min(
-                    elapsed / duration,
-                    1
-                );
-
-
-            const eased =
-                1 -
-                Math.pow(
-                    1 - progress,
-                    3
-                );
-
-
-            const value =
-                target * eased;
-
-
-            counter.textContent =
-                `${prefix}${formatNumber(value)}${suffix}`;
-
-
-            if (progress < 1) {
-
-                requestAnimationFrame(
-                    update
-                );
-
-            } else {
-
-                counter.textContent =
-                    `${prefix}${formatNumber(target)}${suffix}`;
-
-            }
-
-        };
-
-
-        requestAnimationFrame(
-            update
-        );
-
-    };
-
-
-    const formatNumber = value => {
-
-        if (
-            Number.isInteger(value)
-        ) {
-
-            return value.toString();
-
-        }
-
-
-        return value
-            .toFixed(1)
-            .replace(
-                /\.0$/,
-                ""
-            );
-
-    };
-
-
-    const observer =
-        new IntersectionObserver(
-            entries => {
-
-                entries.forEach(entry => {
-
-                    if (
-                        entry.isIntersecting
-                    ) {
-
-                        animateCounter(
-                            entry.target
-                        );
-
-                        observer.unobserve(
-                            entry.target
-                        );
-
-                    }
-
-                });
-
-            },
-            {
-                threshold: 0.6
-            }
-        );
-
-
-    counters.forEach(counter => {
-
-        observer.observe(counter);
-
-    });
-
-}
-
-
-/* ============================================================
-   20. EXTERNAL LINK SAFETY
+   13. EXTERNAL LINK SECURITY
    ============================================================ */
 
 function initExternalLinks() {
@@ -1351,25 +883,26 @@ function initExternalLinks() {
 
     links.forEach(link => {
 
-        const currentRel =
+        const existing =
             link.getAttribute("rel") || "";
 
 
-        const relValues =
+        const values =
             new Set(
-                currentRel
+                existing
                     .split(" ")
                     .filter(Boolean)
             );
 
 
-        relValues.add("noopener");
-        relValues.add("noreferrer");
+        values.add("noopener");
+
+        values.add("noreferrer");
 
 
         link.setAttribute(
             "rel",
-            Array.from(relValues).join(" ")
+            [...values].join(" ")
         );
 
     });
@@ -1378,120 +911,22 @@ function initExternalLinks() {
 
 
 /* ============================================================
-   21. LAZY LOAD SUPPORT
-   ============================================================ */
-
-function initLazyImages() {
-
-    const images =
-        document.querySelectorAll(
-            "img[data-src]"
-        );
-
-
-    if (!images.length) return;
-
-
-    if (
-        "IntersectionObserver" in window
-    ) {
-
-        const observer =
-            new IntersectionObserver(
-                entries => {
-
-                    entries.forEach(entry => {
-
-                        if (
-                            !entry.isIntersecting
-                        ) {
-                            return;
-                        }
-
-
-                        const image =
-                            entry.target;
-
-
-                        image.src =
-                            image.dataset.src;
-
-
-                        image.removeAttribute(
-                            "data-src"
-                        );
-
-
-                        observer.unobserve(
-                            image
-                        );
-
-                    });
-
-                },
-                {
-                    rootMargin:
-                        "200px 0px"
-                }
-            );
-
-
-        images.forEach(image => {
-
-            observer.observe(image);
-
-        });
-
-    } else {
-
-        images.forEach(image => {
-
-            image.src =
-                image.dataset.src;
-
-            image.removeAttribute(
-                "data-src"
-            );
-
-        });
-
-    }
-
-}
-
-
-/* ============================================================
-   22. INITIALIZE OPTIONAL FEATURES
-   ============================================================ */
-
-initMouseGlow();
-initProjectInteraction();
-initExperienceAnimation();
-initStatCounters();
-initExternalLinks();
-initLazyImages();
-
-
-/* ============================================================
-   23. CONSOLE BRANDING
+   14. CONSOLE BRANDING
    ============================================================ */
 
 console.log(
     "%c BANU PRAKASH REDDY ",
-    "background:#69e7c8;color:#06110e;font-size:16px;font-weight:bold;padding:8px 12px;border-radius:6px;"
+    "background:#69e7c8;color:#06110e;font-size:15px;font-weight:bold;padding:8px 12px;border-radius:6px;"
 );
+
 
 console.log(
     "%c Data • Analytics • AI • Engineering ",
     "color:#69e7c8;font-size:12px;"
 );
 
+
 console.log(
-    "%c Portfolio system initialized successfully.",
+    "%c Portfolio initialized successfully.",
     "color:#717c8b;font-size:11px;"
 );
-
-
-/* ============================================================
-   END OF SCRIPT
-   ============================================================ */
