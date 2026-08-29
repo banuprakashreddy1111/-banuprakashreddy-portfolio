@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
 
     <meta
@@ -10,74 +12,126 @@
 
     <meta
         name="description"
-        content="Banu Prakash Reddy — Data Analyst and Data Scientist portfolio featuring SQL, Python, Power BI, Machine Learning, and data-driven projects."
+        content="Banu Prakash Reddy — Data Analyst and Data Scientist portfolio. Explore projects in SQL, Python, Power BI, Machine Learning and application development."
     >
 
     <meta
-        name="keywords"
-        content="Banu Prakash Reddy, Data Analyst, Data Scientist, Python, SQL, Power BI, Machine Learning, MySQL, Portfolio"
+        name="author"
+        content="Banu Prakash Reddy"
     >
 
-    <meta name="author" content="Banu Prakash Reddy">
+    <meta
+        name="theme-color"
+        content="#070a0f"
+    >
 
-    <meta name="theme-color" content="#070b14">
+    <title>
+        Banu Prakash Reddy | Data Analyst & Data Scientist
+    </title>
 
-    <title>Banu Prakash Reddy | Data Analyst & Data Scientist</title>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- =====================================================
+         GOOGLE FONTS
+         ===================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
 
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap"
         rel="stylesheet"
     >
 
-    <!-- Font Awesome -->
+
+    <!-- =====================================================
+         FONT AWESOME
+         ===================================================== -->
+
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     >
 
-    <!-- Main stylesheet -->
-    <link rel="stylesheet" href="style.css">
+
+    <!-- =====================================================
+         CSS
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
 </head>
+
 
 <body>
 
-    <!-- =========================================================
-         PAGE LOADER
-    ========================================================== -->
 
-    <div class="page-loader" id="pageLoader">
-        <div class="loader-inner">
-            <span class="loader-dot"></span>
-            <span class="loader-dot"></span>
-            <span class="loader-dot"></span>
-        </div>
-    </div>
-
-
-    <!-- =========================================================
+    <!-- =====================================================
          BACKGROUND
-    ========================================================== -->
+         ===================================================== -->
 
-    <div class="background">
+    <div
+        class="background"
+        aria-hidden="true"
+    >
+
         <div class="background-grid"></div>
+
         <div class="background-glow glow-one"></div>
+
         <div class="background-glow glow-two"></div>
+
     </div>
 
 
-    <!-- =========================================================
-         NAVIGATION
-    ========================================================== -->
+    <!-- =====================================================
+         PAGE LOADER
+         ===================================================== -->
 
-    <header class="site-header" id="siteHeader">
+    <div
+        class="page-loader"
+        aria-label="Loading portfolio"
+    >
 
-        <nav class="navbar container">
+        <div class="loader-inner">
 
-            <a href="#home" class="brand" aria-label="Banu Prakash Reddy home">
+            <span class="loader-dot"></span>
+
+            <span class="loader-dot"></span>
+
+            <span class="loader-dot"></span>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="site-header">
+
+        <div class="container navbar">
+
+
+            <!-- BRAND -->
+
+            <a
+                href="#home"
+                class="brand"
+                aria-label="Banu Prakash Reddy home"
+            >
 
                 <span class="brand-mark">
                     B
@@ -90,66 +144,102 @@
             </a>
 
 
-            <button
-                class="menu-toggle"
-                id="menuToggle"
-                aria-label="Open navigation menu"
-                aria-expanded="false"
-                type="button"
+            <!-- NAVIGATION -->
+
+            <nav
+                class="nav-menu"
+                aria-label="Primary navigation"
             >
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
 
-
-            <div class="nav-menu" id="navMenu">
-
-                <a href="#home" class="nav-link active">
+                <a
+                    href="#home"
+                    class="nav-link active"
+                >
                     Home
                 </a>
 
-                <a href="#about" class="nav-link">
+                <a
+                    href="#about"
+                    class="nav-link"
+                >
                     About
                 </a>
 
-                <a href="#skills" class="nav-link">
+                <a
+                    href="#skills"
+                    class="nav-link"
+                >
                     Skills
                 </a>
 
-                <a href="#projects" class="nav-link">
+                <a
+                    href="#projects"
+                    class="nav-link"
+                >
                     Projects
                 </a>
 
-                <a href="#experience" class="nav-link">
+                <a
+                    href="#experience"
+                    class="nav-link"
+                >
                     Experience
                 </a>
 
-                <a href="#contact" class="nav-link nav-contact">
+                <a
+                    href="#education"
+                    class="nav-link"
+                >
+                    Education
+                </a>
+
+                <a
+                    href="#contact"
+                    class="nav-link nav-contact"
+                >
                     Contact
                 </a>
 
-            </div>
+            </nav>
 
-        </nav>
+
+            <!-- MOBILE MENU -->
+
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-label="Toggle navigation menu"
+                aria-expanded="false"
+                aria-controls="primary-navigation"
+            >
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
 
     </header>
 
 
-    <!-- =========================================================
-         MAIN
-    ========================================================== -->
-
     <main>
 
 
-        <!-- =====================================================
+        <!-- =================================================
              HERO
-        ====================================================== -->
+             ================================================= -->
 
-        <section class="hero section" id="home">
+        <section
+            id="home"
+            class="hero"
+        >
 
             <div class="container hero-container">
+
+
+                <!-- HERO CONTENT -->
 
                 <div class="hero-content reveal">
 
@@ -157,9 +247,7 @@
 
                         <span class="status-dot"></span>
 
-                        <span>
-                            Open to opportunities
-                        </span>
+                        Open to opportunities
 
                     </div>
 
@@ -170,20 +258,16 @@
                         <span class="accent-text">
                             data
                         </span>
-
-                        into
-
-                        <span class="accent-text">
-                            decisions.
-                        </span>
+                        into decisions.
 
                     </h1>
 
 
                     <p class="hero-description">
 
-                        I'm <strong>Banu Prakash Reddy</strong>, a
-                        Data Analyst and Data Scientist focused on
+                        I'm
+                        <strong>Banu Prakash Reddy</strong>,
+                        a Data Analyst and Data Scientist focused on
                         transforming raw data into clear insights,
                         analytical solutions, and practical products.
 
@@ -194,33 +278,25 @@
 
                         <span class="role-line"></span>
 
-                        <span>
-                            SQL
-                        </span>
+                        SQL
 
                         <span class="role-separator">
                             /
                         </span>
 
-                        <span>
-                            Python
-                        </span>
+                        Python
 
                         <span class="role-separator">
                             /
                         </span>
 
-                        <span>
-                            Power BI
-                        </span>
+                        Power BI
 
                         <span class="role-separator">
                             /
                         </span>
 
-                        <span>
-                            Machine Learning
-                        </span>
+                        Machine Learning
 
                     </div>
 
@@ -231,11 +307,24 @@
                             href="#projects"
                             class="btn btn-primary"
                         >
-                            <span>
-                                Explore my work
-                            </span>
 
-                            <i class="fa-solid fa-arrow-right"></i>
+                            Explore my work
+
+                            <i class="fa-solid fa-arrow-down"></i>
+
+                        </a>
+
+
+                        <a
+                            href="BanuPrakashReddy_resume.pdf"
+                            class="btn btn-secondary"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+
+                            <i class="fa-solid fa-file-arrow-down"></i>
+
+                            Resume
 
                         </a>
 
@@ -244,9 +333,10 @@
                             href="#contact"
                             class="btn btn-secondary"
                         >
-                            <span>
-                                Let's connect
-                            </span>
+
+                            Let's connect
+
+                            <i class="fa-solid fa-arrow-right"></i>
 
                         </a>
 
@@ -256,11 +346,16 @@
                     <div class="hero-socials">
 
                         <a
-                            href="mailto:banuprakashreddysonnapureddy@gmail.com"
-                            aria-label="Email Banu Prakash Reddy"
+                            href="https://github.com/banuprakashreddy1111"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="GitHub"
                         >
-                            <i class="fa-solid fa-envelope"></i>
+
+                            <i class="fa-brands fa-github"></i>
+
                         </a>
+
 
                         <a
                             href="https://www.linkedin.com/in/sonnapureddybanuprakashreddy/"
@@ -268,16 +363,19 @@
                             rel="noopener noreferrer"
                             aria-label="LinkedIn"
                         >
+
                             <i class="fa-brands fa-linkedin-in"></i>
+
                         </a>
 
+
                         <a
-                            href="https://github.com/banuprakashreddy1111"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="GitHub"
+                            href="mailto:banuprakashreddysonnapureddy@gmail.com"
+                            aria-label="Email"
                         >
-                            <i class="fa-brands fa-github"></i>
+
+                            <i class="fa-solid fa-envelope"></i>
+
                         </a>
 
                     </div>
@@ -287,14 +385,52 @@
 
                 <!-- HERO VISUAL -->
 
-                <div class="hero-visual reveal reveal-delay">
+                <div
+                    class="hero-visual reveal reveal-delay"
+                >
 
                     <div class="data-orbit">
 
+
                         <div class="orbit orbit-one"></div>
+
                         <div class="orbit orbit-two"></div>
+
                         <div class="orbit orbit-three"></div>
 
+
+                        <!-- PROFILE PHOTO -->
+
+                        <div class="profile-photo-card">
+
+                            <div class="profile-photo-glow"></div>
+
+                            <div class="profile-photo-frame">
+
+                                <img
+                                    src="ppsizepic.jpeg"
+                                    alt="Banu Prakash Reddy"
+                                    class="profile-photo"
+                                >
+
+                            </div>
+
+                            <div class="profile-photo-label">
+
+                                <span>
+                                    DATA / AI
+                                </span>
+
+                                <strong>
+                                    BANU PRAKASH REDDY
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- TERMINAL -->
 
                         <div class="core-card">
 
@@ -306,10 +442,10 @@
 
                             </div>
 
-
                             <div class="core-body">
 
                                 <div class="code-line">
+
                                     <span class="code-keyword">
                                         SELECT
                                     </span>
@@ -317,9 +453,12 @@
                                     <span>
                                         insight
                                     </span>
+
                                 </div>
 
+
                                 <div class="code-line">
+
                                     <span class="code-keyword">
                                         FROM
                                     </span>
@@ -327,9 +466,12 @@
                                     <span>
                                         data
                                     </span>
+
                                 </div>
 
+
                                 <div class="code-line">
+
                                     <span class="code-keyword">
                                         WHERE
                                     </span>
@@ -337,9 +479,12 @@
                                     <span>
                                         impact = true
                                     </span>
+
                                 </div>
 
+
                                 <div class="code-line">
+
                                     <span class="code-keyword">
                                         ORDER BY
                                     </span>
@@ -347,10 +492,16 @@
                                     <span>
                                         value DESC
                                     </span>
+
                                 </div>
 
-                                <div class="code-cursor">
-                                    _
+
+                                <div class="code-line">
+
+                                    <span class="code-cursor">
+                                        _
+                                    </span>
+
                                 </div>
 
                             </div>
@@ -358,13 +509,18 @@
                         </div>
 
 
+                        <!-- FLOATING SQL -->
+
                         <div class="floating-card card-sql">
 
                             <div class="floating-icon">
+
                                 <i class="fa-solid fa-database"></i>
+
                             </div>
 
                             <div>
+
                                 <small>
                                     Analytics
                                 </small>
@@ -372,18 +528,24 @@
                                 <strong>
                                     SQL
                                 </strong>
+
                             </div>
 
                         </div>
 
 
+                        <!-- FLOATING PYTHON -->
+
                         <div class="floating-card card-python">
 
                             <div class="floating-icon">
+
                                 <i class="fa-brands fa-python"></i>
+
                             </div>
 
                             <div>
+
                                 <small>
                                     Programming
                                 </small>
@@ -391,18 +553,24 @@
                                 <strong>
                                     Python
                                 </strong>
+
                             </div>
 
                         </div>
 
 
+                        <!-- FLOATING POWER BI -->
+
                         <div class="floating-card card-powerbi">
 
                             <div class="floating-icon">
-                                <i class="fa-solid fa-chart-column"></i>
+
+                                <i class="fa-solid fa-chart-simple"></i>
+
                             </div>
 
                             <div>
+
                                 <small>
                                     BI
                                 </small>
@@ -410,90 +578,96 @@
                                 <strong>
                                     Power BI
                                 </strong>
+
                             </div>
 
                         </div>
 
                     </div>
 
+
+                    <div class="scroll-indicator">
+
+                        <span>
+                            Scroll to explore
+                        </span>
+
+                        <i class="fa-solid fa-arrow-down"></i>
+
+                    </div>
+
                 </div>
-
-            </div>
-
-
-            <div class="scroll-indicator">
-
-                <span>
-                    Scroll to explore
-                </span>
-
-                <i class="fa-solid fa-arrow-down"></i>
 
             </div>
 
         </section>
 
 
-        <!-- =====================================================
-             QUICK STATS
-        ====================================================== -->
+        <!-- =================================================
+             STATS
+             ================================================= -->
 
         <section class="stats-section">
 
-            <div class="container">
-
-                <div class="stats-grid">
-
-                    <div class="stat-item reveal">
-
-                        <span class="stat-number">
-                            70K+
-                        </span>
-
-                        <span class="stat-label">
-                            Records analyzed
-                        </span>
-
-                    </div>
+            <div class="container stats-grid">
 
 
-                    <div class="stat-item reveal">
+                <div class="stat-item reveal">
 
-                        <span class="stat-number">
-                            40%
-                        </span>
+                    <span
+                        class="stat-number"
+                    >
+                        70K+
+                    </span>
 
-                        <span class="stat-label">
-                            Manual effort reduced
-                        </span>
+                    <span class="stat-label">
+                        Records analyzed
+                    </span>
 
-                    </div>
-
-
-                    <div class="stat-item reveal">
-
-                        <span class="stat-number">
-                            114
-                        </span>
-
-                        <span class="stat-label">
-                            SQL analysis queries
-                        </span>
-
-                    </div>
+                </div>
 
 
-                    <div class="stat-item reveal">
+                <div class="stat-item reveal">
 
-                        <span class="stat-number">
-                            4+
-                        </span>
+                    <span
+                        class="stat-number"
+                    >
+                        40%
+                    </span>
 
-                        <span class="stat-label">
-                            Featured projects
-                        </span>
+                    <span class="stat-label">
+                        Manual effort reduced
+                    </span>
 
-                    </div>
+                </div>
+
+
+                <div class="stat-item reveal">
+
+                    <span
+                        class="stat-number"
+                    >
+                        114
+                    </span>
+
+                    <span class="stat-label">
+                        SQL analysis queries
+                    </span>
+
+                </div>
+
+
+                <div class="stat-item reveal">
+
+                    <span
+                        class="stat-number"
+                    >
+                        5
+                    </span>
+
+                    <span class="stat-label">
+                        Featured projects
+                    </span>
 
                 </div>
 
@@ -502,13 +676,17 @@
         </section>
 
 
-        <!-- =====================================================
+        <!-- =================================================
              ABOUT
-        ====================================================== -->
+             ================================================= -->
 
-        <section class="section about-section" id="about">
+        <section
+            id="about"
+            class="section"
+        >
 
             <div class="container">
+
 
                 <div class="section-heading reveal">
 
@@ -528,24 +706,36 @@
 
                 <div class="about-grid">
 
+
                     <div class="about-main reveal">
 
                         <p class="about-lead">
 
                             I enjoy working at the intersection of
-                            <strong>data, technology, and business problems</strong>.
+                            <strong>
+                                data, technology, and business problems.
+                            </strong>
 
                         </p>
 
 
                         <p>
 
-                            My work spans SQL analytics, Python-based
-                            data processing, dashboard development,
-                            machine learning, and application development.
+                            My work spans SQL analytics,
+                            Python-based data processing,
+                            dashboard development,
+                            machine learning, and application
+                            development.
+
+                        </p>
+
+
+                        <p>
+
                             I focus on understanding the problem first,
-                            working with reliable data, and turning the
-                            result into something useful and actionable.
+                            working with reliable data, and turning
+                            the result into something useful and
+                            actionable.
 
                         </p>
 
@@ -554,9 +744,9 @@
 
                             During my internship experience, I worked
                             with large datasets, automated repetitive
-                            workflows, created analytical reports, and
-                            collaborated around business and technical
-                            requirements.
+                            workflows, created analytical reports,
+                            and collaborated around business and
+                            technical requirements.
 
                         </p>
 
@@ -567,9 +757,13 @@
                                 href="mailto:banuprakashreddysonnapureddy@gmail.com"
                                 class="text-link"
                             >
+
                                 Email me
+
                                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
                             </a>
+
 
                             <a
                                 href="https://github.com/banuprakashreddy1111"
@@ -577,8 +771,25 @@
                                 rel="noopener noreferrer"
                                 class="text-link"
                             >
+
                                 View GitHub
+
                                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                            </a>
+
+
+                            <a
+                                href="BanuPrakashReddy_resume.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="text-link"
+                            >
+
+                                View Resume
+
+                                <i class="fa-solid fa-file-lines"></i>
+
                             </a>
 
                         </div>
@@ -587,6 +798,7 @@
 
 
                     <div class="about-side reveal reveal-delay">
+
 
                         <div class="info-card">
 
@@ -639,6 +851,32 @@
 
                         </div>
 
+
+                        <div class="info-card">
+
+                            <span class="info-label">
+                                Core strength
+                            </span>
+
+                            <strong>
+                                Analytical Problem Solving
+                            </strong>
+
+                        </div>
+
+
+                        <div class="info-card">
+
+                            <span class="info-label">
+                                Approach
+                            </span>
+
+                            <strong>
+                                Insight → Action
+                            </strong>
+
+                        </div>
+
                     </div>
 
                 </div>
@@ -648,13 +886,17 @@
         </section>
 
 
-        <!-- =====================================================
+        <!-- =================================================
              SKILLS
-        ====================================================== -->
+             ================================================= -->
 
-        <section class="section skills-section" id="skills">
+        <section
+            id="skills"
+            class="section skills-section"
+        >
 
             <div class="container">
+
 
                 <div class="section-heading reveal">
 
@@ -675,23 +917,27 @@
                 <div class="skills-grid">
 
 
-                    <article class="skill-card reveal">
+                    <!-- SQL -->
 
-                        <div class="skill-icon">
-                            <i class="fa-solid fa-database"></i>
-                        </div>
+                    <article class="skill-card reveal">
 
                         <span class="skill-number">
                             01
                         </span>
+
+                        <div class="skill-icon">
+
+                            <i class="fa-solid fa-database"></i>
+
+                        </div>
 
                         <h3>
                             SQL & Databases
                         </h3>
 
                         <p>
-                            Designing queries and extracting meaningful
-                            insights from relational data.
+                            Designing queries and extracting
+                            meaningful insights from relational data.
                         </p>
 
                         <div class="skill-tags">
@@ -708,23 +954,27 @@
                     </article>
 
 
-                    <article class="skill-card reveal">
+                    <!-- PYTHON -->
 
-                        <div class="skill-icon">
-                            <i class="fa-brands fa-python"></i>
-                        </div>
+                    <article class="skill-card reveal">
 
                         <span class="skill-number">
                             02
                         </span>
+
+                        <div class="skill-icon">
+
+                            <i class="fa-brands fa-python"></i>
+
+                        </div>
 
                         <h3>
                             Python & Analytics
                         </h3>
 
                         <p>
-                            Cleaning, transforming, analyzing, and
-                            visualizing data with Python.
+                            Cleaning, transforming, analyzing,
+                            and visualizing data with Python.
                         </p>
 
                         <div class="skill-tags">
@@ -740,15 +990,19 @@
                     </article>
 
 
-                    <article class="skill-card reveal">
+                    <!-- BI -->
 
-                        <div class="skill-icon">
-                            <i class="fa-solid fa-chart-line"></i>
-                        </div>
+                    <article class="skill-card reveal">
 
                         <span class="skill-number">
                             03
                         </span>
+
+                        <div class="skill-icon">
+
+                            <i class="fa-solid fa-chart-column"></i>
+
+                        </div>
 
                         <h3>
                             BI & Visualization
@@ -771,23 +1025,27 @@
                     </article>
 
 
-                    <article class="skill-card reveal">
+                    <!-- ML -->
 
-                        <div class="skill-icon">
-                            <i class="fa-solid fa-brain"></i>
-                        </div>
+                    <article class="skill-card reveal">
 
                         <span class="skill-number">
                             04
                         </span>
+
+                        <div class="skill-icon">
+
+                            <i class="fa-solid fa-brain"></i>
+
+                        </div>
 
                         <h3>
                             Machine Learning
                         </h3>
 
                         <p>
-                            Building practical predictive models and
-                            deploying data-driven applications.
+                            Building practical predictive models
+                            and deploying data-driven applications.
                         </p>
 
                         <div class="skill-tags">
@@ -803,15 +1061,19 @@
                     </article>
 
 
-                    <article class="skill-card reveal">
+                    <!-- DEVELOPMENT -->
 
-                        <div class="skill-icon">
-                            <i class="fa-solid fa-code"></i>
-                        </div>
+                    <article class="skill-card reveal">
 
                         <span class="skill-number">
                             05
                         </span>
+
+                        <div class="skill-icon">
+
+                            <i class="fa-solid fa-code"></i>
+
+                        </div>
 
                         <h3>
                             Development
@@ -835,23 +1097,28 @@
                     </article>
 
 
-                    <article class="skill-card reveal">
+                    <!-- ENGINEERING -->
 
-                        <div class="skill-icon">
-                            <i class="fa-solid fa-gears"></i>
-                        </div>
+                    <article class="skill-card reveal">
 
                         <span class="skill-number">
                             06
                         </span>
+
+                        <div class="skill-icon">
+
+                            <i class="fa-solid fa-gears"></i>
+
+                        </div>
 
                         <h3>
                             Engineering Workflow
                         </h3>
 
                         <p>
-                            Managing projects, documentation, deployment,
-                            automation, and reproducible workflows.
+                            Managing projects, documentation,
+                            deployment, automation, and reproducible
+                            workflows.
                         </p>
 
                         <div class="skill-tags">
@@ -873,20 +1140,24 @@
         </section>
 
 
-        <!-- =====================================================
+        <!-- =================================================
              PROJECTS
-        ====================================================== -->
+             ================================================= -->
 
-        <section class="section projects-section" id="projects">
+        <section
+            id="projects"
+            class="section"
+        >
 
             <div class="container">
+
 
                 <div class="section-heading projects-heading reveal">
 
                     <div>
 
                         <span class="section-kicker">
-                            03 / Selected work
+                            03 / Selected Work
                         </span>
 
                         <h2>
@@ -898,14 +1169,18 @@
 
                     </div>
 
+
                     <a
                         href="https://github.com/banuprakashreddy1111"
                         target="_blank"
                         rel="noopener noreferrer"
                         class="outline-link"
                     >
+
                         All repositories
-                        <i class="fa-brands fa-github"></i>
+
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
                     </a>
 
                 </div>
@@ -914,9 +1189,11 @@
                 <div class="projects-list">
 
 
-                    <!-- PROJECT 01 -->
+                    <!-- =================================================
+                         PROJECT 01
+                         ================================================= -->
 
-                    <article class="project-card project-featured reveal">
+                    <article class="project-card reveal">
 
                         <div class="project-index">
                             01
@@ -932,7 +1209,7 @@
                                 </span>
 
                                 <span class="project-year">
-                                    Python
+                                    PYTHON
                                 </span>
 
                             </div>
@@ -946,10 +1223,10 @@
                             <p>
 
                                 Explored Amazon product pricing data
-                                using Python to identify pricing patterns,
-                                product trends, relationships between
-                                attributes, and actionable analytical
-                                insights.
+                                using Python to identify pricing
+                                patterns, product trends, relationships
+                                between attributes, and actionable
+                                analytical insights.
 
                             </p>
 
@@ -974,8 +1251,11 @@
                                     rel="noopener noreferrer"
                                     class="project-link primary-link"
                                 >
-                                    <i class="fa-brands fa-github"></i>
+
                                     View repository
+
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
                                 </a>
 
                             </div>
@@ -990,14 +1270,14 @@
                                 <div class="chart-header">
 
                                     <div class="window-controls">
+
                                         <span></span>
                                         <span></span>
                                         <span></span>
+
                                     </div>
 
-                                    <span>
-                                        price_analysis.py
-                                    </span>
+                                    price_analysis.py
 
                                 </div>
 
@@ -1006,13 +1286,13 @@
 
                                     <div class="chart-bars">
 
-                                        <span style="height: 35%"></span>
-                                        <span style="height: 55%"></span>
-                                        <span style="height: 45%"></span>
-                                        <span style="height: 75%"></span>
-                                        <span style="height: 62%"></span>
-                                        <span style="height: 88%"></span>
-                                        <span style="height: 70%"></span>
+                                        <span style="height:38%"></span>
+                                        <span style="height:56%"></span>
+                                        <span style="height:44%"></span>
+                                        <span style="height:73%"></span>
+                                        <span style="height:62%"></span>
+                                        <span style="height:86%"></span>
+                                        <span style="height:68%"></span>
 
                                     </div>
 
@@ -1025,7 +1305,9 @@
                     </article>
 
 
-                    <!-- PROJECT 02 -->
+                    <!-- =================================================
+                         PROJECT 02
+                         ================================================= -->
 
                     <article class="project-card reveal">
 
@@ -1043,7 +1325,7 @@
                                 </span>
 
                                 <span class="project-year">
-                                    MySQL
+                                    MYSQL
                                 </span>
 
                             </div>
@@ -1084,8 +1366,11 @@
                                     rel="noopener noreferrer"
                                     class="project-link primary-link"
                                 >
-                                    <i class="fa-brands fa-github"></i>
+
                                     View repository
+
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
                                 </a>
 
                             </div>
@@ -1098,31 +1383,43 @@
                             <div class="sql-lines">
 
                                 <div>
+
                                     <span class="sql-keyword">
                                         SELECT
                                     </span>
+
                                     avg_delay
+
                                 </div>
 
                                 <div>
+
                                     <span class="sql-keyword">
                                         FROM
                                     </span>
+
                                     arrivals
+
                                 </div>
 
                                 <div>
+
                                     <span class="sql-keyword">
                                         GROUP BY
                                     </span>
+
                                     vehicle
+
                                 </div>
 
                                 <div>
+
                                     <span class="sql-keyword">
                                         ORDER BY
                                     </span>
+
                                     delay DESC
+
                                 </div>
 
                             </div>
@@ -1132,7 +1429,9 @@
                     </article>
 
 
-                    <!-- PROJECT 03 -->
+                    <!-- =================================================
+                         PROJECT 03
+                         ================================================= -->
 
                     <article class="project-card reveal">
 
@@ -1150,7 +1449,7 @@
                                 </span>
 
                                 <span class="project-year">
-                                    FastAPI
+                                    FASTAPI
                                 </span>
 
                             </div>
@@ -1164,10 +1463,11 @@
                             <p>
 
                                 Built a mobile comparison application
-                                that helps users compare phone specifications
-                                and indicative pricing while bringing
-                                multiple product attributes into one
-                                decision-making interface.
+                                that helps users compare phone
+                                specifications and indicative pricing
+                                while bringing multiple product
+                                attributes into one decision-making
+                                interface.
 
                             </p>
 
@@ -1192,9 +1492,13 @@
                                     rel="noopener noreferrer"
                                     class="project-link primary-link"
                                 >
-                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
                                     Live demo
+
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
                                 </a>
+
 
                                 <a
                                     href="https://github.com/banuprakashreddy1111/mobile-compare"
@@ -1202,8 +1506,11 @@
                                     rel="noopener noreferrer"
                                     class="project-link"
                                 >
-                                    <i class="fa-brands fa-github"></i>
+
                                     GitHub
+
+                                    <i class="fa-brands fa-github"></i>
+
                                 </a>
 
                             </div>
@@ -1218,8 +1525,11 @@
                                 <div class="phone-screen">
 
                                     <div class="phone-top">
+
                                         <span></span>
+
                                     </div>
+
 
                                     <div class="phone-content">
 
@@ -1229,13 +1539,11 @@
 
                                         <strong>
                                             Mobile
-                                        </strong>
-
-                                        <strong>
                                             Devices
                                         </strong>
 
                                         <div class="phone-line"></div>
+
                                         <div class="phone-line short"></div>
 
                                     </div>
@@ -1249,7 +1557,9 @@
                     </article>
 
 
-                    <!-- PROJECT 04 -->
+                    <!-- =================================================
+                         PROJECT 04
+                         ================================================= -->
 
                     <article class="project-card reveal">
 
@@ -1267,7 +1577,7 @@
                                 </span>
 
                                 <span class="project-year">
-                                    Deep Learning
+                                    DEEP LEARNING
                                 </span>
 
                             </div>
@@ -1280,10 +1590,11 @@
 
                             <p>
 
-                                Built an end-to-end deep learning pipeline
-                                for diabetes risk prediction, including
-                                preprocessing, feature scaling, ANN model
-                                training, and deployment through Streamlit.
+                                Built an end-to-end deep learning
+                                pipeline for diabetes risk prediction,
+                                including preprocessing, feature
+                                scaling, ANN model training, and
+                                deployment through Streamlit.
 
                             </p>
 
@@ -1307,9 +1618,13 @@
                                     rel="noopener noreferrer"
                                     class="project-link primary-link"
                                 >
-                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
                                     Live demo
+
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
                                 </a>
+
 
                                 <a
                                     href="https://github.com/banuprakashreddy1111/diabetes_prediction_dl-"
@@ -1317,8 +1632,11 @@
                                     rel="noopener noreferrer"
                                     class="project-link"
                                 >
-                                    <i class="fa-brands fa-github"></i>
+
                                     GitHub
+
+                                    <i class="fa-brands fa-github"></i>
+
                                 </a>
 
                             </div>
@@ -1339,7 +1657,9 @@
 
                                 </div>
 
+
                                 <div class="network-connections"></div>
+
 
                                 <div class="network-column">
 
@@ -1349,7 +1669,9 @@
 
                                 </div>
 
+
                                 <div class="network-connections"></div>
+
 
                                 <div class="network-column">
 
@@ -1365,7 +1687,9 @@
                     </article>
 
 
-                    <!-- PROJECT 05 -->
+                    <!-- =================================================
+                         PROJECT 05
+                         ================================================= -->
 
                     <article class="project-card reveal">
 
@@ -1383,7 +1707,7 @@
                                 </span>
 
                                 <span class="project-year">
-                                    CropRx
+                                    CROPRX
                                 </span>
 
                             </div>
@@ -1397,8 +1721,9 @@
                             <p>
 
                                 A practical technology project focused
-                                on using software and data-driven workflows
-                                to address an agriculture-related problem.
+                                on using software and data-driven
+                                workflows to address an
+                                agriculture-related problem.
 
                             </p>
 
@@ -1420,8 +1745,11 @@
                                     rel="noopener noreferrer"
                                     class="project-link primary-link"
                                 >
-                                    <i class="fa-brands fa-github"></i>
+
                                     View repository
+
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
                                 </a>
 
                             </div>
@@ -1434,11 +1762,16 @@
                             <div class="crop-grid">
 
                                 <span>01</span>
-                                <span>02</span>
+                                <span>AI</span>
                                 <span>03</span>
+
                                 <span>04</span>
-                                <span>05</span>
+                                <span>ML</span>
                                 <span>06</span>
+
+                                <span>07</span>
+                                <span>DATA</span>
+                                <span>09</span>
 
                             </div>
 
@@ -1453,13 +1786,17 @@
         </section>
 
 
-        <!-- =====================================================
+        <!-- =================================================
              EXPERIENCE
-        ====================================================== -->
+             ================================================= -->
 
-        <section class="section experience-section" id="experience">
+        <section
+            id="experience"
+            class="section"
+        >
 
             <div class="container">
+
 
                 <div class="section-heading reveal">
 
@@ -1479,6 +1816,7 @@
 
                 <div class="experience-card reveal">
 
+
                     <div class="experience-meta">
 
                         <span class="experience-date">
@@ -1489,14 +1827,14 @@
                             Bengaluru, India
                         </span>
 
+                        <span class="experience-type">
+                            INTERNSHIP
+                        </span>
+
                     </div>
 
 
                     <div class="experience-content">
-
-                        <span class="experience-type">
-                            INTERNSHIP
-                        </span>
 
                         <h3>
                             Data Scientist Intern
@@ -1511,9 +1849,10 @@
 
                             Worked across data analysis, SQL,
                             Python automation, reporting, and
-                            machine-learning workflows while translating
-                            business and technical requirements into
-                            practical analytical outputs.
+                            machine-learning workflows while
+                            translating business and technical
+                            requirements into practical analytical
+                            outputs.
 
                         </p>
 
@@ -1521,31 +1860,61 @@
                         <ul class="experience-points">
 
                             <li>
+
                                 <span></span>
-                                Processed and analyzed
-                                <strong>70,000+ records</strong>
-                                using Python and SQL.
+
+                                <div>
+                                    Processed and analyzed
+                                    <strong>
+                                        70,000+ records
+                                    </strong>
+                                    using Python and SQL.
+                                </div>
+
                             </li>
 
-                            <li>
-                                <span></span>
-                                Built KPI dashboards and analytical
-                                reports using Power BI and Python
-                                visualization tools.
-                            </li>
 
                             <li>
+
                                 <span></span>
-                                Automated repetitive data workflows,
-                                reducing manual reporting effort by
-                                approximately <strong>40%</strong>.
+
+                                <div>
+                                    Built KPI dashboards and
+                                    analytical reports using
+                                    Power BI and Python
+                                    visualization tools.
+                                </div>
+
                             </li>
 
+
                             <li>
+
                                 <span></span>
-                                Applied SQL joins, CTEs, aggregations,
-                                subqueries, and analytical logic for
-                                reporting and analysis.
+
+                                <div>
+                                    Automated repetitive data
+                                    workflows, reducing manual
+                                    reporting effort by approximately
+                                    <strong>
+                                        40%
+                                    </strong>.
+                                </div>
+
+                            </li>
+
+
+                            <li>
+
+                                <span></span>
+
+                                <div>
+                                    Applied SQL joins, CTEs,
+                                    aggregations, subqueries,
+                                    and analytical logic for
+                                    reporting and analysis.
+                                </div>
+
                             </li>
 
                         </ul>
@@ -1559,13 +1928,17 @@
         </section>
 
 
-        <!-- =====================================================
+        <!-- =================================================
              EDUCATION
-        ====================================================== -->
+             ================================================= -->
 
-        <section class="section education-section">
+        <section
+            id="education"
+            class="section"
+        >
 
             <div class="container">
+
 
                 <div class="section-heading reveal">
 
@@ -1574,7 +1947,10 @@
                     </span>
 
                     <h2>
-                        Academic foundation.
+                        Academic
+                        <span class="muted">
+                            foundation.
+                        </span>
                     </h2>
 
                 </div>
@@ -1582,8 +1958,11 @@
 
                 <div class="education-card reveal">
 
+
                     <div class="education-icon">
+
                         <i class="fa-solid fa-graduation-cap"></i>
+
                     </div>
 
 
@@ -1632,13 +2011,17 @@
         </section>
 
 
-        <!-- =====================================================
+        <!-- =================================================
              CERTIFICATIONS
-        ====================================================== -->
+             ================================================= -->
 
-        <section class="section certifications-section">
+        <section
+            id="certifications"
+            class="section"
+        >
 
             <div class="container">
+
 
                 <div class="section-heading reveal">
 
@@ -1647,7 +2030,10 @@
                     </span>
 
                     <h2>
-                        Continuous learning.
+                        Continuous
+                        <span class="muted">
+                            learning.
+                        </span>
                     </h2>
 
                 </div>
@@ -1663,7 +2049,9 @@
                         </span>
 
                         <div class="cert-icon">
+
                             <i class="fa-brands fa-python"></i>
+
                         </div>
 
                         <h3>
@@ -1685,7 +2073,9 @@
                         </span>
 
                         <div class="cert-icon">
+
                             <i class="fa-solid fa-wand-magic-sparkles"></i>
+
                         </div>
 
                         <h3>
@@ -1706,7 +2096,9 @@
                         </span>
 
                         <div class="cert-icon">
+
                             <i class="fa-solid fa-briefcase"></i>
+
                         </div>
 
                         <h3>
@@ -1714,12 +2106,11 @@
                         </h3>
 
                         <p>
-                            Deloitte, BCGX, and PwC
-                            virtual experience programs.
+                            Deloitte, BCGX, and PwC virtual
+                            experience programs.
                         </p>
 
                     </article>
-
 
                 </div>
 
@@ -1728,15 +2119,20 @@
         </section>
 
 
-        <!-- =====================================================
+        <!-- =================================================
              CONTACT
-        ====================================================== -->
+             ================================================= -->
 
-        <section class="section contact-section" id="contact">
+        <section
+            id="contact"
+            class="section contact-section"
+        >
 
             <div class="container">
 
+
                 <div class="contact-card reveal">
+
 
                     <div class="contact-background-number">
                         07
@@ -1745,28 +2141,33 @@
 
                     <div class="contact-content">
 
+
                         <span class="section-kicker">
                             07 / Contact
                         </span>
 
+
                         <h2>
+
                             Have a problem
                             <span>
                                 worth solving?
                             </span>
+
                         </h2>
+
 
                         <p>
 
-                            I'm open to opportunities in data analytics,
-                            data science, and data-driven technology roles.
-                            If you have a project, opportunity, or simply
-                            want to connect, feel free to reach out.
+                            I'm open to opportunities in data
+                            analytics, data science, and
+                            data-driven technology roles.
+                            If you have a project, opportunity,
+                            or simply want to connect, feel free
+                            to reach out.
 
                         </p>
 
-
-                        <!-- DIRECT EMAIL -->
 
                         <a
                             href="mailto:banuprakashreddysonnapureddy@gmail.com"
@@ -1792,9 +2193,13 @@
                                 href="mailto:banuprakashreddysonnapureddy@gmail.com"
                                 class="btn btn-primary"
                             >
+
                                 Send me an email
+
                                 <i class="fa-solid fa-paper-plane"></i>
+
                             </a>
+
 
                             <a
                                 href="https://www.linkedin.com/in/sonnapureddybanuprakashreddy/"
@@ -1802,8 +2207,25 @@
                                 rel="noopener noreferrer"
                                 class="btn btn-secondary"
                             >
+
                                 LinkedIn
+
                                 <i class="fa-brands fa-linkedin-in"></i>
+
+                            </a>
+
+
+                            <a
+                                href="BanuPrakashReddy_resume.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="btn btn-secondary"
+                            >
+
+                                View Resume
+
+                                <i class="fa-solid fa-file-lines"></i>
+
                             </a>
 
                         </div>
@@ -1816,17 +2238,17 @@
 
         </section>
 
-
     </main>
 
 
-    <!-- =========================================================
+    <!-- =====================================================
          FOOTER
-    ========================================================== -->
+         ===================================================== -->
 
     <footer class="site-footer">
 
         <div class="container footer-container">
+
 
             <div class="footer-brand">
 
@@ -1868,8 +2290,11 @@
                     rel="noopener noreferrer"
                     aria-label="GitHub"
                 >
+
                     <i class="fa-brands fa-github"></i>
+
                 </a>
+
 
                 <a
                     href="https://www.linkedin.com/in/sonnapureddybanuprakashreddy/"
@@ -1877,14 +2302,9 @@
                     rel="noopener noreferrer"
                     aria-label="LinkedIn"
                 >
-                    <i class="fa-brands fa-linkedin-in"></i>
-                </a>
 
-                <a
-                    href="mailto:banuprakashreddysonnapureddy@gmail.com"
-                    aria-label="Email"
-                >
-                    <i class="fa-solid fa-envelope"></i>
+                    <i class="fa-brands fa-linkedin-in"></i>
+
                 </a>
 
             </div>
@@ -1893,7 +2313,8 @@
             <div class="footer-bottom">
 
                 <span>
-                    © 2026 Banu Prakash Reddy
+                    © <span data-current-year>2026</span>
+                    Banu Prakash Reddy
                 </span>
 
                 <span>
@@ -1907,15 +2328,14 @@
     </footer>
 
 
-    <!-- =========================================================
+    <!-- =====================================================
          BACK TO TOP
-    ========================================================== -->
+         ===================================================== -->
 
     <button
         class="back-to-top"
-        id="backToTop"
-        aria-label="Back to top"
         type="button"
+        aria-label="Back to top"
     >
 
         <i class="fa-solid fa-arrow-up"></i>
@@ -1923,8 +2343,12 @@
     </button>
 
 
-    <!-- Main JavaScript -->
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
     <script src="script.js"></script>
 
 </body>
+
 </html>
